@@ -1,0 +1,9 @@
+User :
+        Name
+        Email
+        Password
+        Username
+        Favourite Games (Array)
+        Favourite Video (Array)
+        Favourite Activity (Array)
+        Favourite News Article (Array)
