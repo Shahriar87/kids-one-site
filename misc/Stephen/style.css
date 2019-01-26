@@ -1,0 +1,16 @@
+body{
+    background-color: blueviolet;
+}
+
+.cont{
+    background-color: pink !important;
+    border: 1px;
+}
+
+footer{
+    background-color: chocolate;
+}
+
+.nav_color{
+    background-color: aqua !important;
+}
