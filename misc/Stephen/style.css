@@ -14,3 +14,9 @@ footer{
 .nav_color{
     background-color: aqua !important;
 }
+
+.col_2{
+    border-left: 1px black solid;
+    
+    border-right: 1px black solid;
+}
