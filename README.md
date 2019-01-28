@@ -1,5 +1,7 @@
 # Kids One Site (App is under construction!)
 
+[Check the app](https://kids-one-site.herokuapp.com/)
+
 ## About This Boilerplate
 
 This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
