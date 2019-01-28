@@ -21,7 +21,7 @@ class ChatApp extends React.Component {
     this.sendHandler = this.sendHandler.bind(this);
 
     // Connect to the server
-    this.socket = io(config.api, { query: `username=${props.username}` }).connect();
+    this.socket = io(config.api, { query: `username=${props.username}` }).connect(window.location.hostname);
 
     // Listen for messages from the server
     this.socket.on('server:message', message => {
@@ -53,7 +53,7 @@ class ChatApp extends React.Component {
     // Here we want to render the main chat application components
     return (
       <div className="container">
-        <h3>React Chat App</h3>
+        <h3>Chat Box</h3>
         <Messages messages={this.state.messages} />
         <ChatInput onSend={this.sendHandler} />
       </div>

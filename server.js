@@ -1,14 +1,12 @@
 const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
+const PORT2 = process.env.PORT2 || 4008; 
 const app = express();
 
 const http = require("http");
 const cors = require("cors");
 const io = require("socket.io");
-// import cors from 'cors';
-// import io from 'socket.io';
-const config = { "port": 4008 }
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -36,8 +34,8 @@ app.get('/messages', (req, res) => {
 });
 
 // Start listening
-server.listen(process.env.PORT || 4008);
-console.log(`Started on port ${4008}`);
+server.listen(PORT2);
+console.log(`Started on port ${PORT2}`);
 
 // Setup socket.io
 socketIo.on('connection', socket => {
