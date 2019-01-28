@@ -1,5 +1,6 @@
 // ----- ContentBody component
 import React, { Component } from "react";
+import App from "./messenger/App";
 
 class ContentBody extends Component {
     render() {
@@ -11,7 +12,7 @@ class ContentBody extends Component {
                     <div class="card">
                         <div class="card-header">
                             Featured
-            </div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Special title treatment</h5>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -19,7 +20,9 @@ class ContentBody extends Component {
                         </div>
                     </div>
                     <div class="col_2 col-sm-6">Main</div>
-                    <div class="col_3 col-sm-3">Messages</div>
+                    <div class="col_3 col-sm-3">
+                        <App />
+                    </div>
                 </div>
             </div>
         );

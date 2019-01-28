@@ -3,6 +3,13 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+const http = require("http");
+const cors = require("cors");
+const io = require("socket.io");
+// import cors from 'cors';
+// import io from 'socket.io';
+const config = { "port": 4008 }
+
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -12,6 +19,50 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes here
+
+
+
+
+// setup server
+const server = http.createServer(app);
+const socketIo = io(server);
+
+// Allow CORS
+app.use(cors());
+
+// Render a API index page
+app.get('/messages', (req, res) => {
+  res.sendFile(path.resolve('./public/index.html'));
+});
+
+// Start listening
+server.listen(process.env.PORT || 4008);
+console.log(`Started on port ${4008}`);
+
+// Setup socket.io
+socketIo.on('connection', socket => {
+  const username = socket.handshake.query.username;
+  console.log(`${username} connected`);
+
+  socket.on('client:message', data => {
+    console.log(`${data.username}: ${data.message}`);
+
+    // message received from client, now broadcast it to everyone else
+    socket.broadcast.emit('server:message', data);
+  });
+
+  socket.on('disconnect', () => {
+    console.log(`${username} disconnected`);
+  });
+});
+
+// export default app;
+
+
+
+
+
+
 
 // Send every other request to the React app
 // Define any API routes before this runs
