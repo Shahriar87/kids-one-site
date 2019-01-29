@@ -6,6 +6,12 @@
 // use a local API, but if the app is running publicly on the internet we want to
 // use a publicly accessible version of this API. Storing the address in the config
 // file allows us to easily create different settings for various environments.
+// export default {
+//   api: 'http://localhost:4008'
+// }
+
+
+
 export default {
-  api: 'http://localhost:4008'
+  api: 'https://kids-one-site.herokuapp.com:4008'
 }
