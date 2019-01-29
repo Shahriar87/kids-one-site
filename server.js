@@ -1,12 +1,14 @@
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3001;
-// const PORT2 = process.env.PORT2 || 4008; 
+const PORT = 3001;
 const app = express();
-
 const http = require("http");
 const cors = require("cors");
 const io = require("socket.io");
+// var mongoose = require("mongoose");
+
+// ----- Importing all modesl
+// var db = require("./models");
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -52,15 +54,13 @@ socketIo.on('connection', socket => {
 
 
 
-
-
 // Send every other request to the React app
 // Define any API routes before this runs
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 // Start listening
-server.listen(PORT,() => {
+server.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
