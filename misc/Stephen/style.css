@@ -1,22 +1,110 @@
 body{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 
 .cont{
-    background-color: pink !important;
+    /* background-color: pink !important; */
     border: 1px;
 }
 
 footer{
-    background-color: chocolate;
+    /* background-color: chocolate; */
 }
 
 .nav_color{
-    background-color: aqua !important;
+    /* background-color: aqua !important; */
+    /* background-image: linear-gradient(to right, red , yellow); */
+    background-image: linear-gradient(to bottom right, red, yellow);
+
 }
 
 .col_2{
     border-left: 1px black solid;
     
     border-right: 1px black solid;
+}
+
+#score{
+    background-color: black;
+    color: aliceblue
+}
+
+#profile_img {
+
+    height:  100%;
+    width: 15%;
+    border: 2px solid black;
+}
+
+#logo {
+
+    height:  100%;
+    width: 10%;
+    
+}
+
+.panel-heading{
+
+    /* background-color: bisque; */
+}
+
+.panel-defaul{
+    padding-right: 0px
+}
+
+#logo_nav{
+    padding: 0px;
+}
+
+
+/* For login Page */
+.sign-in-up .left-inner-addon {
+    position: relative;
+}
+
+.sign-in-up .left-inner-addon input {
+    padding-left: 30px;
+}
+
+.sign-in-up .left-inner-addon i {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+.sign-in-up .right-inner-addon {
+    position: relative;
+}
+
+.sign-in-up .right-inner-addon input {
+    padding-right: 30px;
+}
+
+.sign-in-up .right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 17px 12px;
+    pointer-events: none;
+}
+
+.sign-in-up .click2select {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.sign-in-up .paywith {
+    padding: 12px 12px 0 0;
+    margin: 0;
+    font-weight: bold;
+}
+.btn-danger, .btn-danger:hover{
+  background-color: #333399 !important;
+  border-color: #333399 !important;
+}
+.btn-primary, .btn-primary:hover{
+  background-color: #3366CC !important;
+  border-color: #3366CC !important;
+}
+input[type="text"], input[type="password"], .btn{
+  border-radius: 0px;
 }
