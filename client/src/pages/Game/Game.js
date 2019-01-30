@@ -1,5 +1,5 @@
 import React from "react";
-import GameBody from "../components/GameBody";
+import GameBody from "../../components/GameBody/GameBody";
 
 function Game() {
     return (

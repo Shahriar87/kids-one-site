@@ -1,6 +1,6 @@
 // ----- ContentBody component
 import React, { Component } from "react";
-import App from "./messenger/App";
+import App from "../messenger/App";
 
 class ContentBody extends Component {
     render() {

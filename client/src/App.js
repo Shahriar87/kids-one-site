@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import logo from './logo.svg';
 import './App.css';
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import Video from "./pages/Video";
-import Game from "./pages/Game";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Home from "./pages/Home/Home";
+import Video from "./pages/Video/Video";
+import Game from "./pages/Game/Game";
 
 class App extends Component {
   render() {

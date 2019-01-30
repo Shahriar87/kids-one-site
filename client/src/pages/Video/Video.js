@@ -1,5 +1,5 @@
 import React from "react";
-import VideoBody from "../components/VideoBody";
+import VideoBody from "../../components/VideoBody/VideoBody";
 
 function Video() {
     return (
