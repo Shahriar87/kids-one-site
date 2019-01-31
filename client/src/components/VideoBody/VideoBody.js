@@ -25,12 +25,12 @@ class VideoBody extends Component {
                             <div className="card-header">
                                 Video
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Video Title</h5>
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="..."></iframe>
+                            <div className="card-body">
+                                <h5 className="card-title">Video Title</h5>
+                                <div className="embed-responsive embed-responsive-16by9">
+                                    <iframe className="embed-responsive-item" src="..."></iframe>
                                 </div>
-                                <p class="card-text">Video description.</p>
+                                <p className="card-text">Video description.</p>
                             </div>
                         </div>
                     </div>

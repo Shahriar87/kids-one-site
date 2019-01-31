@@ -22,8 +22,8 @@ class GameBody extends Component {
                             <div className="card-header">
                                 Game
                             </div>
-                            <div class="card-body col-md-12 embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="http://funkypotato.com/gamez/bunny-goes-boom/index.html"></iframe>
+                            <div className="card-body col-md-12 embed-responsive embed-responsive-16by9">
+                                <iframe className="embed-responsive-item" src="http://funkypotato.com/gamez/bunny-goes-boom/index.html"></iframe>
                             </div>
                         </div>
                     </div>
