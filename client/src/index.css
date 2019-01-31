@@ -15,21 +15,21 @@ code {
 
 
 body{
-  /* background-color: blueviolet; */
+  background-color: blueviolet;
 }
 
 .cont{
-  /* background-color: pink !important; */
+  background-color: pink !important;
   border: 1px;
 }
 
 footer{
-  /* background-color: chocolate; */
+  background-color: chocolate;
 }
 
 .nav_color{
-  /* background-color: aqua !important; */
-  /* background-image: linear-gradient(to right, red , yellow); */
+  background-color: aqua !important;
+  background-image: linear-gradient(to right, red , yellow);
   background-image: linear-gradient(to bottom right, red, yellow);
 
 }
@@ -61,7 +61,7 @@ footer{
 
 .panel-heading{
 
-  /* background-color: bisque; */
+  background-color: bisque;
 }
 
 .panel-defaul{

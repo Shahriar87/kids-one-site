@@ -1,12 +1,12 @@
 import React from 'react';
 import ChatApp from './ChatApp';
 
-require('./styles/App.css');
+require('./styles/MessengerApp.css');
 require('./styles/Login.css');
 
 // This is the first screen seen by the user. We should display some way for
 // them to enter their name and enter the chat room
-class App extends React.Component {
+class MessengerApp extends React.Component {
   constructor(props) {
     super(props);
     // set the initial state of the application
@@ -53,7 +53,7 @@ class App extends React.Component {
   }
 
 }
-App.defaultProps = {
+MessengerApp.defaultProps = {
 };
 
-export default App;
+export default MessengerApp;

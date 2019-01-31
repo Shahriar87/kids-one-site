@@ -1,1 +1,4 @@
-        1 file(s) copied.
+body {
+	background-color: rgba(0, 0, 0, 0.404);
+	opacity: 60;
+}

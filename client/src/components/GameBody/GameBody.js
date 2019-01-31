@@ -1,21 +1,41 @@
 // -----GameBody component
 import React, { Component } from "react";
-
+import MessengerApp from "../messenger/MessengerApp";
 
 class GameBody extends Component {
     render() {
         return (
             <div>
-                <div>
-                    <div class="row">
-                        <div class="col-md-2 panel panel-defaul">
-                            <div class="panel-heading">Panel Heading</div>
-                            <div class="panel-body">Panel Content</div>
+                <div className="row cont">
+                    <div className="col-sm-3">
+                        <div className="card">
+                            <div className="card-header">
+                                Panel Heading
                         </div>
-                        <div class=" col-md-8 embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="http://funkypotato.com/gamez/bunny-goes-boom/index.html"></iframe>
+                            <div className="card-body">
+                                Panel Content
                         </div>
-                        <div id="score" class="col-md-2">TBD</div>
+                        </div>
+                    </div>
+                    <div className="col-sm-6">
+                        <div className="card">
+                            <div className="card-header">
+                                Game
+                            </div>
+                            <div class="card-body col-md-12 embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="http://funkypotato.com/gamez/bunny-goes-boom/index.html"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-sm-3">
+                        <div className="card" >
+                            <div className="card-header">
+                                Messages
+                            </div>
+                            <div className="card-body">
+                                <MessengerApp />
+                            </div>
+                        </div>
                     </div>
                 </div>
 
