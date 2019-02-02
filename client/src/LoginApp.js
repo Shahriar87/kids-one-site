@@ -13,7 +13,7 @@ import './index.css';
 const LoginApp = () => {
   const signupWasClickedCallback = (data) => {
     console.log(data);
-    alert('Signup callback, see log on the console to see the data.');
+    // alert('Signup callback, see log on the console to see the data.');
   };
   const loginWasClickedCallback = (data) => {
     console.log(data);

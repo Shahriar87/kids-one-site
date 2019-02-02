@@ -7,7 +7,7 @@ class Footer extends Component {
         return (
             <footer class="footer">
                 <div class="container mx-auto">
-                    <MessengerApp />
+                    {/* <MessengerApp /> */}
                 </div>
             </footer>
         );

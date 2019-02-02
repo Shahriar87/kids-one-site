@@ -7,6 +7,6 @@
 // use a publicly accessible version of this API. Storing the address in the config
 // file allows us to easily create different settings for various environments.
 export default {
-  api: 'http://localhost:3001'
+  api: window.location.host,
 }
 
