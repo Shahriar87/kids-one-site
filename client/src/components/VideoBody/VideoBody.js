@@ -9,7 +9,7 @@ class VideoBody extends Component {
         return (
             <div>
                 <div className="row cont">
-                    <div className="col-sm-3">
+                    <div className="col-sm-4">
                         <div className="card">
                             <div className="card-header">
                             </div>
@@ -20,7 +20,7 @@ class VideoBody extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-sm-6">
+                    <div className="col-sm-8">
                         <div className="card">
                             <div className="card-header">
                                 Video
@@ -31,16 +31,6 @@ class VideoBody extends Component {
                                     </iframe>
                                 </div>
                                 <p className="card-text">Video description.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-3">
-                        <div className="card" >
-                            <div className="card-header">
-                                Messages
-                            </div>
-                            <div className="card-body">
-                                {/* <MessengerApp /> */}
                             </div>
                         </div>
                     </div>
