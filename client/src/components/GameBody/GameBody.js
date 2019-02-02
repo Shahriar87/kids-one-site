@@ -7,7 +7,7 @@ class GameBody extends Component {
         return (
             <div>
                 <div className="row cont">
-                    <div className="col-sm-3">
+                    <div className="col-sm-4">
                         <div className="card">
                             <div className="card-header">
                                 Panel Heading
@@ -17,23 +17,13 @@ class GameBody extends Component {
                         </div>
                         </div>
                     </div>
-                    <div className="col-sm-6">
+                    <div className="col-sm-8">
                         <div className="card">
                             <div className="card-header">
                                 Game
                             </div>
                             <div className="card-body col-md-12 embed-responsive embed-responsive-16by9">
                                 <iframe className="embed-responsive-item" src="http://funkypotato.com/gamez/bunny-goes-boom/index.html"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-3">
-                        <div className="card" >
-                            <div className="card-header">
-                                Messages
-                            </div>
-                            <div className="card-body">
-                                <MessengerApp />
                             </div>
                         </div>
                     </div>
