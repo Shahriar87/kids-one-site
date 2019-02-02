@@ -8,6 +8,8 @@ import Video from "./pages/Video/Video";
 import Game from "./pages/Game/Game";
 import MessengerApp from "./components/messenger/MessengerApp";
 
+import LoginApp from "./LoginApp";
+
 
 class App extends Component {
   render() {
@@ -15,12 +17,13 @@ class App extends Component {
 
       <Router>
         <div>
+          <Route exact path="/" component={LoginApp} />
+
           <Navbar />
-          <Route exact path="/" component={Home} />
+          <Route exact path="/home" component={Home} />
           <Route exact path="/video" component={Video} />
           <Route exact path="/game" component={Game} />
-
-          {/* <Route exact path="/about" component={About} /> */} 
+          {/* <Route exact path="/about" component={About} /> */}
           <Footer />
         </div>
       </Router >

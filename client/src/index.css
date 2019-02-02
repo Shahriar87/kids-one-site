@@ -125,3 +125,26 @@ input[type="text"], input[type="password"], .btn{
 border-radius: 0px;
 }
 
+
+/* Login Page Style */
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.loginWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
