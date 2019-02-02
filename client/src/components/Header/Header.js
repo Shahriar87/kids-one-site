@@ -1,7 +1,7 @@
 // ----- NavTabs component
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import { Navbar, NavDropdown, Nav, NavTabs, Form, FormControl, Button} from 'react-bootstrap';
+import { Navbar, NavDropdown, Nav, NavTabs, Form, FormControl, Button } from 'react-bootstrap';
 
 class Header extends Component {
     render() {
@@ -11,9 +11,15 @@ class Header extends Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/home">Home</Nav.Link>
-                        <Nav.Link href="/video">Video</Nav.Link>
-                        <Nav.Link href="/game">Game</Nav.Link>
+                        <Nav.Link>
+                            <Link className="mr-3" to={'/home'}>Home</Link>
+                        </Nav.Link>
+                        <Nav.Link>
+                            <Link className="mr-3" to={'/video'}>Video</Link>
+                        </Nav.Link>
+                        <Nav.Link>
+                            <Link className="mr-3" to={'/game'}>Game</Link>
+                        </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
