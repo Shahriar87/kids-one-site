@@ -40,7 +40,7 @@ class VideoBody extends Component {
                                 Messages
                             </div>
                             <div className="card-body">
-                                <MessengerApp />
+                                {/* <MessengerApp /> */}
                             </div>
                         </div>
                     </div>
