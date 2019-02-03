@@ -5,10 +5,15 @@ const app = express();
 const http = require("http");
 const cors = require("cors");
 const io = require("socket.io");
-// var mongoose = require("mongoose");
+var mongoose = require("mongoose");
+
+const URI = "mongodb://localhost/kidklub";
+
+//Connect to MongoDB
+mongoose.connect(process.env.MONGODB_URI || URI);
 
 // ----- Importing all modesl
-// var db = require("./models");
+
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -19,8 +24,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes here
-
-
+require("./routes/apiRoutes")(app, express);
 
 
 // setup server
@@ -29,11 +33,6 @@ const socketIo = io(server);
 
 // Allow CORS
 app.use(cors());
-
-// Render a API index page
-// app.get('/messages', (req, res) => {
-//   res.sendFile(path.resolve('./public/index.html'));
-// });
 
 // Setup socket.io
 socketIo.on('connection', socket => {
