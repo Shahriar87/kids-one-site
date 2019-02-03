@@ -30,43 +30,19 @@ const LoginApp = () => {
     console.log(data);
     // alert('Login callback, see log on the console to see the data.');
 
-    axios.post('/api/account/signin', data)
-      .then(function (res) {
-        console.log(res);
-      })
-      .then(json => {
-        console.log('json', json);
-        if (json.success) {
-          setInStorage('the_main_app', { token: json.token });
-          this.setState({
-            signInError: json.message,
-            isLoading: false,
-            signInPassword: '',
-            signInEmail: '',
-            token: json.token,
-          });
-        } else {
-          this.setState({
-            signInError: json.message,
-            isLoading: false,
-          })
-            .catch(function (err) {
-              console.log(err);
-            });
+
+  };
+
+  return (
+    <div className="loginWrapper">
+      <ReactSignupLoginComponent
+        title="Welcome to KidKlub!"
+        handleSignup={signupWasClickedCallback}
+        handleLogin={loginWasClickedCallback}
+      />
+    </div>
+  );
+};
 
 
-        };
-
-        return (
-          <div className="loginWrapper">
-            <ReactSignupLoginComponent
-              title="Welcome to KidKlub!"
-              handleSignup={signupWasClickedCallback}
-              handleLogin={loginWasClickedCallback}
-            />
-          </div>
-        );
-      };
-
-
-    export default LoginApp;
+export default LoginApp;

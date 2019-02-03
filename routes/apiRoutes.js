@@ -1,5 +1,5 @@
 const User = require('../models/user.model');
-const UserSession = require('../models/UserSession');
+const UserSession = require('../models/userSession.model');
 
 module.exports = app => {
     // ----- Sign up API endpoints
