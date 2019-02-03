@@ -31,9 +31,9 @@ const socketIo = io(server);
 app.use(cors());
 
 // Render a API index page
-app.get('/messages', (req, res) => {
-  res.sendFile(path.resolve('./public/index.html'));
-});
+// app.get('/messages', (req, res) => {
+//   res.sendFile(path.resolve('./public/index.html'));
+// });
 
 // Setup socket.io
 socketIo.on('connection', socket => {
@@ -56,9 +56,9 @@ socketIo.on('connection', socket => {
 
 // Send every other request to the React app
 // Define any API routes before this runs
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 // Start listening
 server.listen(PORT, () => {
