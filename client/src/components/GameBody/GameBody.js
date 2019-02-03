@@ -1,6 +1,5 @@
 // -----GameBody component
 import React, { Component } from "react";
-import MessengerApp from "../messenger/MessengerApp";
 
 class GameBody extends Component {
     render() {
@@ -23,7 +22,7 @@ class GameBody extends Component {
                                 Game
                             </div>
                             <div className="card-body col-md-12 embed-responsive embed-responsive-16by9">
-                                <iframe className="embed-responsive-item" src="http://funkypotato.com/gamez/bunny-goes-boom/index.html"></iframe>
+                                <iframe title="Game" className="embed-responsive-item" src="http://funkypotato.com/gamez/bunny-goes-boom/index.html"></iframe>
                             </div>
                         </div>
                     </div>

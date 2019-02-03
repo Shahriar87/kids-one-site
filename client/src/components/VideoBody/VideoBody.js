@@ -1,6 +1,5 @@
 // ----- VideoBody component
 import React, { Component } from "react";
-import MessengerApp from "../messenger/MessengerApp";
 
 // require('./VideoBody.css');
 
@@ -27,7 +26,7 @@ class VideoBody extends Component {
                             </div>
                             <div className="card-body">
                                 <div className="embed-responsive embed-responsive-16by9">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uhHmR7zlGbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                    <iframe title= "video" width="560" height="315" src="https://www.youtube.com/embed/uhHmR7zlGbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                                     </iframe>
                                 </div>
                                 <p className="card-text">Video description.</p>
