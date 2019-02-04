@@ -99,14 +99,14 @@ module.exports = app => {
             if (users.length != 1) {
                 return res.send({
                     success: false,
-                    message: 'Error: Invalid'
+                    message: 'Error: Invalid Authentication'
                 });
             }
             const user = users[0];
             if (!user.validPassword(password)) {
                 return res.send({
                     success: false,
-                    message: 'Error: Invalid'
+                    message: 'Error: Invalid Authentication'
                 });
             }
             // ---- Otherwise correct user

@@ -1,58 +1,30 @@
 /* ---- Sign Up page */
 import './shims.js';
 
-import 'core-js/es6/map';
-import 'core-js/es6/set';
-
 import React from 'react';
 import ReactSignupLoginComponent from './components/ReactSignupLoginComponent';
+import { withRouter } from 'react-router-dom';
 
 import './index.css';
 import axios from 'axios';
 
 
-const LoginApp = () => {
+const LoginApp = (props) => {
   const signupWasClickedCallback = (data) => {
     console.log(data);
-
-    // Grab state
-    const {
-      signUpUsername,
-      signUpPassword,
-    } = this.state;
-    this.setState({
-      isLoading: true,
-    });
-
-    // alert('Signup callback, see log on the console to see the data.');
-
-    // ----- Adding Favourites
+    // ----- Adding User
     axios.post('/api/account/signup', data)
       .then(function (res) {
-        console.log(res);
-
-      })
-
-      .then(json => {
-        console.log('json', json);
-        if (json.success) {
-          this.setState({
-            signUpError: json.message,
-            isLoading: false,
-            signUpUsername: '',
-            signUpPassword: '',
-          });
+        // console.log(res.data);
+        if (res.data.success) {
+          props.history.push('/home');
         } else {
-          this.setState({
-            signUpError: json.message,
-            isLoading: false,
-          });
+          props.history.push('/');
+          alert(res.data.message);
         }
       })
-
-
       .catch(function (err) {
-        console.log(err);
+        // console.log(err);
       });
 
   };
@@ -62,10 +34,16 @@ const LoginApp = () => {
 
     axios.post('/api/account/signin', data)
       .then(function (res) {
-        console.log(res);
+        // console.log(res);
+        if (res.data.success) {
+          props.history.push('/home');
+        } else {
+          props.history.push('/');
+          alert(res.data.message);
+        }
       })
       .catch(function (err) {
-        console.log(err);
+        // console.log(err);
       });
   };
 
@@ -79,8 +57,7 @@ const LoginApp = () => {
     </div>
   );
 
-  
 };
 
 
-export default LoginApp;
+export default withRouter(LoginApp);

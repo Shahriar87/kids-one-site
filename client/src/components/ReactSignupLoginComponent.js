@@ -43,7 +43,6 @@ class ReactSignupLoginComponent extends React.Component {
   }
 
 
-
   render() {
     const styles = {
       wrapper: {

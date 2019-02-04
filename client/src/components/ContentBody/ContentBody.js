@@ -26,7 +26,7 @@ class ContentBody extends Component {
                             <div className="card-header">
                                 Announcements
                             </div>
-                            <div class="card-body">
+                            <div className="card-body">
                                 <h5 className="card-title">Announcement Title</h5>
                                 <p className="card-text">Announcement Body</p>
                                 <a href="#" className="btn btn-primary">Go somewhere</a>
