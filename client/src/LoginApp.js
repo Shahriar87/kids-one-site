@@ -14,13 +14,43 @@ import axios from 'axios';
 const LoginApp = () => {
   const signupWasClickedCallback = (data) => {
     console.log(data);
+
+    // Grab state
+    const {
+      signUpUsername,
+      signUpPassword,
+    } = this.state;
+    this.setState({
+      isLoading: true,
+    });
+
     // alert('Signup callback, see log on the console to see the data.');
 
     // ----- Adding Favourites
     axios.post('/api/account/signup', data)
       .then(function (res) {
         console.log(res);
+
       })
+
+      .then(json => {
+        console.log('json', json);
+        if (json.success) {
+          this.setState({
+            signUpError: json.message,
+            isLoading: false,
+            signUpUsername: '',
+            signUpPassword: '',
+          });
+        } else {
+          this.setState({
+            signUpError: json.message,
+            isLoading: false,
+          });
+        }
+      })
+
+
       .catch(function (err) {
         console.log(err);
       });
@@ -30,7 +60,13 @@ const LoginApp = () => {
     console.log(data);
     // alert('Login callback, see log on the console to see the data.');
 
-
+    axios.post('/api/account/signin', data)
+      .then(function (res) {
+        console.log(res);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
   };
 
   return (
@@ -42,6 +78,8 @@ const LoginApp = () => {
       />
     </div>
   );
+
+  
 };
 
 

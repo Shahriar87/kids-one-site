@@ -9,7 +9,7 @@ class ContentBody extends Component {
     render() {
         return (
             <div>
-                <h1>Welcome to Kids-one-site!</h1>
+                <h1>Welcome to KidKlub!</h1>
                 <div className="row cont">
                     <div className="col-sm-4">
                         <div className="card">
