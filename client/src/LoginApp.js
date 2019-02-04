@@ -26,17 +26,18 @@ const LoginApp = (props) => {
       .catch(function (err) {
         // console.log(err);
       });
-
   };
+
   const loginWasClickedCallback = (data) => {
     console.log(data);
     // alert('Login callback, see log on the console to see the data.');
 
     axios.post('/api/account/signin', data)
       .then(function (res) {
-        // console.log(res);
+        console.log(res);
         if (res.data.success) {
           props.history.push('/home');
+
         } else {
           props.history.push('/');
           alert(res.data.message);
