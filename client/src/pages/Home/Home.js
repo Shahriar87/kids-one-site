@@ -9,7 +9,12 @@ import MessengerApp from "../../components/messenger/MessengerApp";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function Home() {
+function Home(props) {
+
+    let userName = props.userName
+
+    console.log(userName);
+
     return (
         <Router>
             <div>
@@ -27,7 +32,7 @@ function Home() {
                                     Messages
                             </div>
                                 <div className="card-body">
-                                    <MessengerApp />
+                                    <MessengerApp {...props} userName={userName} />
                                 </div>
                             </div>
                         </div>

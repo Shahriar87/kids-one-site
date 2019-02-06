@@ -24,6 +24,8 @@ const authFunc = {
   }
 }
 
+let userName = '';
+
 // ---- Stateful Login Component
 class Login extends React.Component {
   state = {
@@ -32,14 +34,16 @@ class Login extends React.Component {
 
   // ---- Log in authentication
   loginWasClickedCallback = (data) => {
-    console.log(data);
+    // console.log(data);
     // alert('Login callback, see log on the console to see the data.');
 
     axios.post('/api/account/signin', data)
       .then(function (res) {
-        console.log(res.data.success);
+        // console.log(res.data.success);
         if (res.data.success) {
           authFunc.isAuthenticated = true
+          userName = data.username
+          console.log(userName)
         } else {
           authFunc.isAuthenticated = false
           alert(res.data.message)
@@ -102,7 +106,7 @@ class Login extends React.Component {
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
     authFunc.isAuthenticated === true
-      ? <Component {...props} />
+      ? <Component {...props} userName={userName}/>   // Passing username as props
       : <Redirect to={{
         pathname: '/auth',
         state: { from: props.location }
@@ -126,6 +130,9 @@ const AuthButton = withRouter(({ history }) => (
 ))
 
 export default function App() {
+
+
+
   return (
     <Router>
       <div>
@@ -134,7 +141,10 @@ export default function App() {
           <Redirect to="/auth" />
         )} />
         <Route path="/auth" component={Login} />
-        <PrivateRoute path='/home' component={Home} />
+        <PrivateRoute
+          path='/home'
+           component={Home}
+        />
       </div>
     </Router>
   )

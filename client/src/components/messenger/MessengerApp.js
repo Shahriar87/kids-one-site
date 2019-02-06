@@ -10,20 +10,24 @@ class MessengerApp extends React.Component {
   constructor(props) {
     super(props);
     // set the initial state of the application
-    this.state = { username: '' };
+    this.state = { username: this.props.userName };
 
     // bind the 'this' keyword to the event handlers
     this.usernameChangeHandler = this.usernameChangeHandler.bind(this);
     this.usernameSubmitHandler = this.usernameSubmitHandler.bind(this);
+
+    console.log(this.state.username)
+
   }
 
+
   usernameChangeHandler(event) {
-    this.setState({ username: event.target.value });
+    this.setState({ username: this.state.username });
   }
 
   usernameSubmitHandler(event) {
     event.preventDefault();
-    this.setState({ submitted: true, username: this.state.username });
+    this.setState({ submitted: true, username: this.element.value });
   }
 
 
@@ -44,10 +48,11 @@ class MessengerApp extends React.Component {
           <input
             type="text"
             onChange={this.usernameChangeHandler}
-            placeholder="Enter a username..."
+            value ={this.state.username}
+            ref={el => this.element = el}
             required />
         </div>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Start Chat?" />
       </form>
     );
   }
