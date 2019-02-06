@@ -64,6 +64,7 @@ class Login extends React.Component {
         // console.log(res.data);
         if (res.data.success) {
           authFunc.isAuthenticated = true
+          userName = data.username
         } else {
           authFunc.isAuthenticated = false
           alert(res.data.message)
