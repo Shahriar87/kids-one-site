@@ -25,6 +25,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Define API routes here
 require("./routes/apiRoutes")(app, express);
+require("./routes/scrapeRoutes")(app);
 
 
 // setup server

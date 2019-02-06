@@ -7,7 +7,7 @@ import {
   withRouter
 } from 'react-router-dom'
 import Home from "./pages/Home/Home";
-import ReactSignupLoginComponent from './components/ReactSignupLoginComponent';
+import ReactSignupLoginComponent from './components/Authentication/ReactSignupLoginComponent';
 import axios from 'axios';
 
 import './App.css';

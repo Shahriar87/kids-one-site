@@ -4,7 +4,7 @@ import GameBody from "../../components/GameBody/GameBody";
 import VideoBody from "../../components/VideoBody/VideoBody";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import MessengerApp from "../../components/messenger/MessengerApp";
+import MessengerApp from "../../components/Messenger/MessengerApp";
 
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
