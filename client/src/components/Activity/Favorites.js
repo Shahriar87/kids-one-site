@@ -11,9 +11,7 @@ export const Favorites = ({data, highlight, visibility}) => {
 					<BookRow key = {i}
 					         rowNumber = {i}
 					         title = {entry.title}
-					         author = {entry.authors}
-					         rating = {entry.rating}
-					         highlight = {highlight}
+							 highlight = {highlight}
 					/>
 				)}
 			</section>
