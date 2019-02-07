@@ -21,7 +21,7 @@ class VideoBody extends Component {
                         <div className="card">
                             Video
 
-                            <VideoCoverflow />
+                            {/* <VideoCoverflow /> */}
 
                         </div>
                     </div>
