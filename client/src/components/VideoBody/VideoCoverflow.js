@@ -1,6 +1,5 @@
 // ----- VideoBody component
 import React, { Component } from "react";
-import ReactDOM from 'react-dom';
 import Coverflow from 'react-coverflow';
 
 

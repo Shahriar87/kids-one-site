@@ -13,7 +13,7 @@ class VideoBody extends Component {
                             <div className="card-body">
                                 <h5 className="card-title">Recommended Videos</h5>
                                 <p className="card-text">Announcement Body</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                <a href="/home" className="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
                     </div>

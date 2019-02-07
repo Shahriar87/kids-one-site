@@ -1,7 +1,7 @@
 // ----- NavTabs component
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-import { Navbar, NavDropdown, Nav, NavTabs, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 
 class Header extends Component {
     render() {

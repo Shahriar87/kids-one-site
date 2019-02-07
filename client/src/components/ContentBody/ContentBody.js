@@ -2,10 +2,6 @@
 import React, { Component } from "react";
 import { ActivityApp } from '../Activity/ActivityApp';
 
-const styles = {
-    width: "18rem"
-};
-
 class ContentBody extends Component {
     render() {
         return (
@@ -30,7 +26,7 @@ class ContentBody extends Component {
                             <div className="card-body">
                                 <h5 className="card-title">Announcement Title</h5>
                                 <p className="card-text">Announcement Body</p>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                <a href="/video" className="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
                     </div>
