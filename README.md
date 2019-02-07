@@ -1,6 +1,6 @@
 # Kids One Site (App is under construction!)
 
-[Check the app](https://kids-one-site.herokuapp.com/)
+[Check the app](https://kidklub.herokuapp.com/)
 
 ## About This Boilerplate
 
