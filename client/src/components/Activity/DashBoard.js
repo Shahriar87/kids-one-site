@@ -7,18 +7,21 @@ export const DashBoard = ({ type, query, queryObject }) => {
 
 	const submit = (e) => {
 		e.preventDefault();
+		queryObject({
+
+		});
 	};
 
 	return (
 		<nav aria-label="Search Books" id="book-form">
 			<header>
-				<h1>DIY and Interesting Activites</h1>
+				<h5>DIY and Interesting Activites</h5>
 			</header>
+			<form onSubmit={submit}>
+				<input type="submit"
+					value="Search" />
+			</form>
 		</nav>
 	)
 }
 
-DashBoard.propTypes = {
-	type: PropTypes.string,
-	query: PropTypes.string
-};

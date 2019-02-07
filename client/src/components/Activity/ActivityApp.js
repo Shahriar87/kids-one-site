@@ -21,10 +21,6 @@ class ActivityApp extends Component {
       items: [
         null
       ],
-      queryObject: {
-        type: 'q=intitle:',
-        query: 'harry+potter'
-      },
       highlight: 0,
       visibility: {
         highlight: false,
@@ -45,82 +41,28 @@ class ActivityApp extends Component {
 
   // ----- Fetch query from Google API
   fetchQuery() {
-    this.serverRequest = fetch('https://www.googleapis.com/books/v1/volumes?' + this.state.queryObject.type + this.state.queryObject.query)
-      .then(response => response.json())
-      .then((data) => {
-        data.items.forEach((item, i) => {
-          let element = {};
-          if (typeof item.volumeInfo.title != 'undefined') {
-            element.title = item.volumeInfo.title;
-          } else {
-            element.title = null;
-          }
-          if (typeof item.volumeInfo.authors != 'undefined') {
-            element.authors = item.volumeInfo.authors[0];
-          } else {
-            element.authors = null;
-          }
-          if (typeof item.volumeInfo.averageRating != 'undefined') {
-            element.rating = item.volumeInfo.averageRating;
-          } else {
-            element.rating = null;
-          }
-          if (typeof item.volumeInfo.ratingsCount != 'undefined') {
-            element.ratingsCount = item.volumeInfo.ratingsCount;
-          } else {
-            element.ratingsCount = null;
-          }
-          if (typeof item.volumeInfo.publisher != 'undefined') {
-            element.publisher = item.volumeInfo.publisher;
-          } else {
-            element.publisher = null;
-          }
-          if (typeof item.volumeInfo.publishedDate != 'undefined') {
-            element.publishedDate = item.volumeInfo.publishedDate;
-          } else {
-            element.publishedDate = null;
-          }
-          if (typeof item.volumeInfo.description != 'undefined') {
-            element.description = item.volumeInfo.description;
-          } else {
-            element.description = null;
-          }
-          if (typeof item.volumeInfo.imageLinks != 'undefined' &&
-            typeof item.volumeInfo.imageLinks.thumbnail != 'undefined') {
-            element.thumbnail = item.volumeInfo.imageLinks.thumbnail.replace(/http:/i, 'https:');
+    axios.get('api/activity')
+    .then((res) => {
+      console.log(res);
+      res.data.forEach((item, i) => {
+        let element = {};
+        element.title = item.title;
+        element.imageLink = item.imageLink;
+        element.link = item.link;
 
-          } else {
-            element.thumbnail = null;
-          }
-          if (typeof item.saleInfo.listPrice != 'undefined') {
-            element.price = item.saleInfo.listPrice.amount;
-          } else {
-            element.price = null;
-          }
-          if (typeof item.saleInfo.buyLink != 'undefined') {
-            element.purchase = item.saleInfo.buyLink;
-          } else {
-            element.price = null;
-          }
-          if (typeof item.volumeInfo.description != 'undefined') {
-            element.description = item.volumeInfo.description;
-          } else {
-            element.description = null;
-          }
-          this.setState(this.state.items.splice(i, 1, element));
-        })
-      }).catch((err) => {
-        console.error('There was an error fetching data', err);
-      });
+        this.setState(this.state.items.splice(i, 1, element));
+        console.log(element);
+      })
+      
+    }).catch((err) => {
+      console.error('There was an error fetching data', err);
+    });
   }
 
   // ----- Updating the query based on query type selected
   updateQuery(queryObject) {
     this.setState({
-      queryObject: {
-        type: queryObject.type,
-        query: queryObject.query
-      },
+      queryObject: queryObject,
       visibility: {
         highlight: false,
         booklist: true,

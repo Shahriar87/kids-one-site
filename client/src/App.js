@@ -125,7 +125,7 @@ const AuthButton = withRouter(({ history }) => (
   ) : (
       <div>
         <p>You are not logged in.</p>
-        <Redirect to="/auth" />
+        {/* <Redirect to="/auth" /> */}
       </div>
     )
 ))
@@ -138,14 +138,15 @@ export default function App() {
     <Router>
       <div>
         <AuthButton />
-        <Route path="/" render={() => (
+        {/* <Route path="/" render={() => (
           <Redirect to="/auth" />
-        )} />
+        )} /> */}
         <Route path="/auth" component={Login} />
-        <PrivateRoute
+        <Route path="/home" component={Home} />
+        {/* <PrivateRoute
           path='/home'
            component={Home}
-        />
+        /> */}
       </div>
     </Router>
   )

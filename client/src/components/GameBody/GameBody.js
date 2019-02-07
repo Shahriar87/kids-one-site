@@ -22,7 +22,7 @@ class GameBody extends Component {
                                 Game
                             </div>
                             <div className="card-body col-md-12 embed-responsive embed-responsive-16by9">
-                                <iframe title="Game" className="embed-responsive-item" src="http://funkypotato.com/gamez/bunny-goes-boom/index.html"></iframe>
+                                <iframe title="Game" className="embed-responsive-item" src="//funkypotato.com/gamez/bunny-goes-boom/index.html"></iframe>
                             </div>
                         </div>
                     </div>

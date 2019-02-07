@@ -8,10 +8,10 @@ var cheerio = require("cheerio");
 module.exports = (app) => {
 
     // ---- Scraping Kid's Activity
-    app.get("/scrape", (req, res) => {
+    app.get("/api/activity", (req, res) => {
         axios.get("http://play.fisher-price.com/en_US/GamesandActivities/Crafts/index.html").then(function (response) {
             var $ = cheerio.load(response.data);
-
+            var Activity = [];
             $("li.tiles_content").each(function () {
                 var result = {};
 
@@ -29,13 +29,15 @@ module.exports = (app) => {
                     .children("a")
                     .attr("href").trim();
 
-                Activity.create(result).then(function (err, dbActivity) {
-                    if (err) {
-                        console.log(err);
-                    } else {
-                        // console.log(dbActivity);
-                    }
-                })
+                Activity.push(result)
+
+                // Activity.create(result).then(function (err, dbActivity) {
+                //     if (err) {
+                //         console.log(err);
+                //     } else {
+                //         // console.log(dbActivity);
+                //     }
+                // })
             })
 
             // ----- Send a message to the client
@@ -45,16 +47,16 @@ module.exports = (app) => {
 
 
     // ----- Load Show articles
-    app.get("/api/activity", (req, res) => {
-        Activity.find({ "isSaved": false }).limit(12)
-            .exec(function (error, data) {
-                var activityObject = {
-                    activity: data
-                };
-                console.log(activityObject);
-                res.json(activityObject);
-            });
-    });
+    // app.get("/api/activity", (req, res) => {
+    //     Activity.find({ "isSaved": false }).limit(10)
+    //         .exec(function (error, data) {
+    //             var activityObject = {
+    //                 activity: data
+    //             };
+    //             // console.log(activityObject);
+    //             res.json(activityObject);
+    //         });
+    // });
 
 
 
