@@ -16,8 +16,7 @@ export const BookList = ({ data, highlight, visibility }) => {
 			<section id="book-list"
 				aria-label="List of searched books">
 				{data.map((entry, i) =>
-
-					<a target="_blank" href={"//play.fisher-price.com" + entry.link}>
+					<div>
 						<img src={"//play.fisher-price.com" + entry.imageLink} alt={entry.title}  style={styles.img} />
 
 						<BookRow		
@@ -26,7 +25,7 @@ export const BookList = ({ data, highlight, visibility }) => {
 							title={entry.title}
 							highlight={highlight}
 						/>
-					</a>
+					</div>
 				)}
 			</section>
 		)

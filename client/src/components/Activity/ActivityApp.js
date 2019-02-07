@@ -39,7 +39,7 @@ class ActivityApp extends Component {
     this.removeFavorite = this.removeFavorite.bind(this);
   }
 
-  // ----- Fetch query from Google API
+  // ----- Fetch data from activity API
   fetchQuery() {
     axios.get('api/activity')
     .then((res) => {

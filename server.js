@@ -10,7 +10,7 @@ var mongoose = require("mongoose");
 const URI = "mongodb://localhost/kidklub";
 
 //Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || URI);
+mongoose.connect(process.env.MONGODB_URI || URI, { useNewUrlParser: true });
 
 // ----- Importing all modesl
 

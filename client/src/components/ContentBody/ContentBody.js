@@ -18,7 +18,7 @@ class ContentBody extends Component {
                                 Activites
                             </div>
                             <div className="card-body">
-                                    <ActivityApp />
+                                <ActivityApp />
                             </div>
                         </div>
                     </div>
