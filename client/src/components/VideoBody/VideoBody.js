@@ -1,7 +1,5 @@
-// ----- VideoBody component
 import React, { Component } from "react";
-
-// require('./VideoBody.css');
+import VideoCoverflow from "./VideoCoverflow";
 
 class VideoBody extends Component {
     render() {
@@ -21,16 +19,10 @@ class VideoBody extends Component {
                     </div>
                     <div className="col-sm-8">
                         <div className="card">
-                            <div className="card-header">
-                                Video
-                            </div>
-                            <div className="card-body">
-                                <div className="embed-responsive embed-responsive-16by9">
-                                    <iframe title= "video" width="560" height="315" src="https://www.youtube.com/embed/uhHmR7zlGbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                                    </iframe>
-                                </div>
-                                <p className="card-text">Video description.</p>
-                            </div>
+                            Video
+
+                            <VideoCoverflow />
+
                         </div>
                     </div>
                 </div>
@@ -43,16 +35,6 @@ class VideoBody extends Component {
                     crossorigin="anonymous"></script>
 
             </div>
-
-
-
-
-
-
-
-
-
-
 
         );
     }
