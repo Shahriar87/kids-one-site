@@ -6,23 +6,23 @@ class GameBody extends Component {
         return (
             <div>
                 <div className="row cont">
-                    <div className="col-sm-4">
+                    <div className="col-sm-3">
                         <div className="card">
                             <div className="card-header">
-                                Panel Heading
-                        </div>
+                                Game Lists
+                            </div>
                             <div className="card-body">
                                 Panel Content
-                        </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="col-sm-8">
+                    <div className="col-sm-9">
                         <div className="card">
                             <div className="card-header">
                                 Game
                             </div>
                             <div className="card-body col-md-12 embed-responsive embed-responsive-16by9">
-                                <iframe title="Game" className="embed-responsive-item" src="http://funkypotato.com/gamez/bunny-goes-boom/index.html"></iframe>
+                                <iframe title="Game" className="embed-responsive-item" src="https://games.cdn.famobi.com/html5games/s/street-ball-star/v090/?fg_domain=play.famobi.com&fg_aid=A1000-111&fg_uid=c893b0c6-fefb-4218-b63e-97a976d20401&fg_pid=e37ab3ce-88cd-4438-9b9c-a37df5d33736&fg_beat=087&original_ref=https%3A%2F%2Fplay.famobi.com%2Fstreet-ball-star"></iframe>
                             </div>
                         </div>
                     </div>
