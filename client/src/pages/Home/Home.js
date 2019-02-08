@@ -28,8 +28,9 @@ function Home(props) {
                         <div className="col-sm-3">
                             <div className="card">
                                 <div className="card-header">
-                                    Messages
-                            </div>
+                                   <h5>Messenger</h5> 
+                                   <h4>Welcome <strong>{userName}!</strong></h4>
+                                </div>
                                 <div className="card-body">
                                     <MessengerApp {...props} userName={userName} />
                                 </div>

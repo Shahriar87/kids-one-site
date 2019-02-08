@@ -43,7 +43,7 @@ class ActivityApp extends Component {
   fetchQuery() {
     axios.get('api/activity')
     .then((res) => {
-      console.log(res);
+      // console.log(res);
       res.data.forEach((item, i) => {
         let element = {};
         element.title = item.title;
@@ -51,7 +51,7 @@ class ActivityApp extends Component {
         element.link = item.link;
 
         this.setState(this.state.items.splice(i, 1, element));
-        console.log(element);
+        // console.log(element);
       })
       
     }).catch((err) => {
@@ -138,6 +138,10 @@ class ActivityApp extends Component {
   }
 
   componentDidMount() {
+
+    // ----- Run Scraping
+    this.updateQuery();
+
     // ----- Fetching favourites
     axios.get('/api/favorites')
       .then(response => {
@@ -164,7 +168,7 @@ class ActivityApp extends Component {
   render() {
     return (
       <div className="app jumbotron text-center" style={styles.body}>
-        <DashBoard queryObject={this.updateQuery} />
+        {/* <DashBoard queryObject={this.updateQuery} /> */}
 
         <Highlight data={this.state.visibility.favorites ?
           this.state.favorites[this.state.highlight] :

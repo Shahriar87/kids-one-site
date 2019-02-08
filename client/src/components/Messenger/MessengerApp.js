@@ -43,14 +43,16 @@ class MessengerApp extends React.Component {
     // Display a simple login screen with a username field and a submit button
     return (
       <form onSubmit={this.usernameSubmitHandler} className="username-container">
-        <h1>Chat Box</h1>
+        <h1>Lets Chat with Friends!</h1>
         <div>
           <input
             type="text"
             onChange={this.usernameChangeHandler}
-            value ={this.state.username}
+            value={this.state.username}
             ref={el => this.element = el}
-            required />
+            required
+            hidden
+          />
         </div>
         <input type="submit" value="Start Chat?" />
       </form>

@@ -13,9 +13,6 @@ export const DashBoard = ({ queryObject }) => {
 
 	return (
 		<nav aria-label="Search Books" id="book-form">
-			<header>
-				<h5>DIY and Interesting Activites</h5>
-			</header>
 			<form onSubmit={submit}>
 				<input type="submit"
 					value="Search" />

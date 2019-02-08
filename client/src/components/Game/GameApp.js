@@ -42,21 +42,21 @@ class GameApp extends Component {
   // ----- Fetch data from activity API
   fetchQuery() {
     axios.get('api/game')
-    .then((res) => {
-      console.log(res);
-      res.data.forEach((item, i) => {
-        let element = {};
-        element.title = item.title;
-        element.imageLink = item.imageLink;
-        element.link = item.link;
+      .then((res) => {
+        // console.log(res);
+        res.data.forEach((item, i) => {
+          let element = {};
+          element.title = item.title;
+          element.imageLink = item.imageLink;
+          element.link = item.link;
 
-        this.setState(this.state.items.splice(i, 1, element));
-        console.log(element);
-      })
-      
-    }).catch((err) => {
-      console.error('There was an error fetching data', err);
-    });
+          this.setState(this.state.items.splice(i, 1, element));
+          // console.log(element);
+        })
+
+      }).catch((err) => {
+        console.error('There was an error fetching data', err);
+      });
   }
 
   // ----- Updating the query based on query type selected
@@ -138,6 +138,10 @@ class GameApp extends Component {
   }
 
   componentDidMount() {
+
+    // ----- Run Scraping
+    this.updateQuery()
+
     // ----- Fetching favourites
     axios.get('/api/favorites')
       .then(response => {
@@ -164,7 +168,7 @@ class GameApp extends Component {
   render() {
     return (
       <div className="app jumbotron text-center" style={styles.body}>
-        <DashBoard queryObject={this.updateQuery} />
+        {/* <DashBoard queryObject={this.updateQuery} /> */}
 
         <Highlight data={this.state.visibility.favorites ?
           this.state.favorites[this.state.highlight] :

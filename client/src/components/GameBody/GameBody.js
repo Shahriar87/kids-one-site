@@ -7,17 +7,17 @@ class GameBody extends Component {
         return (
             <div>
                 <div className="row cont">
-                    <div className="col-sm-3">
+                    <div className="col-sm-5">
                         <div className="card">
                             <div className="card-header">
-                                Game Lists
+                                Top Games
                             </div>
                             <div className="card-body">
                                 <GameApp />
                             </div>
                         </div>
                     </div>
-                    <div className="col-sm-9">
+                    <div className="col-sm-7">
                         <div className="card">
                             <div className="card-header">
                                 Game
