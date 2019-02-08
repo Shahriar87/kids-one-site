@@ -19,7 +19,6 @@ function Home(props) {
         <Router>
             <div>
                 <Header />
-                <Switch>
                     <div className="row cont">
                         <div className="col-sm-9">
                             <Route exact path="/home" component={ContentBody} />
@@ -37,7 +36,6 @@ function Home(props) {
                             </div>
                         </div>
                     </div>
-                </Switch>
                 <Footer />
             </div>
         </Router >

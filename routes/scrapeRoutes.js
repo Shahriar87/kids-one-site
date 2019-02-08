@@ -58,7 +58,34 @@ module.exports = (app) => {
     //         });
     // });
 
+    // ---- Scraping Kid's Game
+    app.get("/api/game", (req, res) => {
+        axios.get("https://famobi.com/most-played-html5-games/?locale=en").then(function (response) {
+            var $ = cheerio.load(response.data);
+            var Game = [];
+            $("a.premiumTeaserHolder").each(function () {
+                var result = {};
 
+                result.title = $(this)
+                    .attr("title").trim();
+
+                result.imageLink = $(this)
+                    .children("div.figure")
+                    .children("img")
+                    .attr("data-original").trim();
+
+                result.link = $(this)
+                    .attr("href").trim();
+
+                Game.push(result)
+
+            })
+
+            // console.log(Game)
+            // ----- Send a message to the client
+            res.json(Game)
+        }).catch(err => { console.log(err) });
+    });
 
 
 }
