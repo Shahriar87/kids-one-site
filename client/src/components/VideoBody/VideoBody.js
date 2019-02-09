@@ -6,23 +6,14 @@ class VideoBody extends Component {
         return (
             <div>
                 <div className="row cont">
-                    <div className="col-sm-4">
+                    <div className="col-sm-12">
                         <div className="card">
                             <div className="card-header">
+                                Video
                             </div>
                             <div className="card-body">
-                                <h5 className="card-title">Recommended Videos</h5>
-                                <p className="card-text">Announcement Body</p>
-                                <a href="/home" className="btn btn-primary">Go somewhere</a>
+                                <VideoCoverflow />
                             </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-8">
-                        <div className="card">
-                            Video
-
-                            <VideoCoverflow />
-
                         </div>
                     </div>
                 </div>

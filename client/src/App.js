@@ -139,14 +139,14 @@ export default function App() {
       <div>
         <AuthButton />
         <Route path="/" render={() => (
-          <Redirect to="/auth" />
+          <Redirect to="/home" />
         )} />
         <Route path="/auth" component={Login} />
-        {/* <Route path="/home" component={Home} /> */}
-        <PrivateRoute
+        <Route path="/home" component={Home} />
+        {/* <PrivateRoute
           path='/home'
            component={Home}
-        />
+        /> */}
       </div>
     </Router>
   )
