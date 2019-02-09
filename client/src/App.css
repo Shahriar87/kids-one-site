@@ -1,6 +1,6 @@
 body {
-  font-family :'Open Sans', serif;
-  
+  font-family: 'Open Sans', serif;
+
   position: absolute;
   top: 0;
   bottom: 0;
@@ -30,9 +30,10 @@ body {
   color: white;
 }
 
-.navbar{
+.navbar {
   background-color: #5f5ba7 !important;
-  border-bottom: #FFF10D  solid 3px ;
+  border-bottom: #FFF10D solid 3px;
+  border-top: #FFF10D solid 3px;
   color: white !important;
 }
 
@@ -50,10 +51,16 @@ footer {
   background-color: #5f5ba7;
 }
 
+.card-header {
+  background-color: #75AECC;
+  text-align: auto !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
