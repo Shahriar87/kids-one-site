@@ -19,7 +19,7 @@ class ContentBody extends Component {
                             <div className="card-header">
                                 School Announcements
                             </div>
-                            <div className="card-body">
+                            <div id="school_annoucments" className="card-body">
                                 <h5 className="card-title">Valentine's Day Party and Boxes</h5>
                                 <ul>
                                     <li>First Grade will be celebrating Valentine's Day on Thursday, February 14.&nbsp;</li>

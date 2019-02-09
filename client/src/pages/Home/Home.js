@@ -7,7 +7,7 @@ import Footer from "../../components/Footer/Footer";
 // import MessengerApp from "../../components/Messenger/MessengerApp";
 
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route,} from "react-router-dom";
 
 function Home(props) {
 

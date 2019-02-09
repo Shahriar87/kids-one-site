@@ -4,13 +4,19 @@ code {
 }
 
 
-body {}
+
 
 .signout_button {
   background-color: #75AECC;
   margin-bottom: 0px;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url("../src/Assets/Images/Rainbow.svg");
+}
 .cont {
 
   border: 1px;
@@ -127,12 +133,7 @@ body,
   height: 100%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-image: url("../src/Assets/Images/DD-Colorful-Background-Illustration-98786-Preview.jpg");
-}
+
 
 .loginWrapper {
   width: 100%;

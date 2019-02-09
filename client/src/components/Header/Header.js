@@ -8,6 +8,7 @@ class Header extends Component {
         return (
             <Navbar bg="light" expand="lg">
                 <Navbar.Brand href="#home">Welcome to KidKlub!</Navbar.Brand>
+                <img src=""></img>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
