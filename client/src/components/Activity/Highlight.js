@@ -33,15 +33,11 @@ export default class Highlight extends Component {
 
 	fetchActivity = () => {
 		console.log(this.state.activityLink);
-		console.log(axios({
-			method: 'post',
-			url: 'api/singleactivity',
-			data: this.state.activityLink
-		}))
+
 		axios({
 			method: 'post',
 			url: 'api/singleactivity',
-			data: this.state.activityLink
+			data: {activityLink: this.state.activityLink}
 		})
 			.then((res) => {
 				// console.log(res.data)
