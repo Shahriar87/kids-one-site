@@ -142,11 +142,11 @@ export default function App() {
           <Redirect to="/home" />
         )} />
         <Route path="/auth" component={Login} />
-        <Route path="/home" component={Home} />
-        {/* <PrivateRoute
+        {/* <Route path="/home" component={Home} /> */}
+        <PrivateRoute
           path='/home'
            component={Home}
-        /> */}
+        />
       </div>
     </Router>
   )
