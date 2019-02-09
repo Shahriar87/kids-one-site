@@ -58,6 +58,43 @@ module.exports = (app) => {
     //         });
     // });
 
+
+
+    // ---- Scraping Kid's Activity
+    app.post("/api/singleactivity", (req, res) => {
+        // console.log(req.body.activityLink)
+        axios.get(req.body.activityLink).then(function (response) {
+            var $ = cheerio.load(response.data);
+            var singleActivity = [];
+            $("div.left_content").each(function () {
+                var result = {};
+
+                result.data = $(this).html();
+                console.log(result.data)
+
+                singleActivity.push(result)
+            })
+
+            // ----- Send a message to the client
+            res.json(singleActivity)
+            // console.log(singleActivity);
+        }).catch(err => { console.log(err) });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // ---- Scraping Kid's Game
     app.get("/api/game", (req, res) => {
         axios.get("https://famobi.com/most-played-html5-games/?locale=en").then(function (response) {

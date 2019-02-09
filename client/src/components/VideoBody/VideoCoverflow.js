@@ -34,32 +34,33 @@ class VideoCoverflow extends Component {
                         tabIndex="0"
                     >
                         <div className="embed-responsive embed-responsive-16by9">
-                            <iframe title="video" width="200%" height="auto" src="https://www.youtube.com/embed/sNoWAz6bia8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
+                            <iframe title="video" width="100%" height="auto" src="https://www.youtube.com/embed/sNoWAz6bia8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
                             </iframe>
                         </div>
                     </div>
+                    
                     <div className="embed-responsive embed-responsive-16by9">
-                        <iframe title="video" width="200%" height="auto" src="https://www.youtube.com/embed/uhHmR7zlGbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
+                        <iframe title="video" width="100%" height="auto" src="https://www.youtube.com/embed/uhHmR7zlGbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
                         </iframe>
                     </div>
                     <div className="embed-responsive embed-responsive-16by9">
-                        <iframe title="video" width="200%" height="auto" src="https://www.youtube.com/embed/XqZsoesa55w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
+                        <iframe title="video" width="100%" height="auto" src="https://www.youtube.com/embed/XqZsoesa55w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
                         </iframe>
                     </div>
                     <div className="embed-responsive embed-responsive-16by9">
-                        <iframe title="video" width="200%" height="auto" src="https://www.youtube.com/embed/H7FUoV7R_w4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
+                        <iframe title="video" width="100%" height="auto" src="https://www.youtube.com/embed/H7FUoV7R_w4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
                         </iframe>
                     </div>
                     <div className="embed-responsive embed-responsive-16by9">
-                        <iframe title="video" width="200%" height="auto" src="https://www.youtube.com/embed/XnqGFn0Byg4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
+                        <iframe title="video" width="100%" height="auto" src="https://www.youtube.com/embed/XnqGFn0Byg4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
                         </iframe>
                     </div>
                     <div className="embed-responsive embed-responsive-16by9">
-                        <iframe title="video" width="200%" height="auto" src="https://www.youtube.com/embed/edr2aL9Mjys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
+                        <iframe title="video" width="100%" height="auto" src="https://www.youtube.com/embed/edr2aL9Mjys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
                         </iframe>
                     </div>
                     <div className="embed-responsive embed-responsive-16by9">
-                        <iframe title="video" width="200%" height="auto" src="https://www.youtube.com/embed/a27Q0LlNZSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
+                        <iframe title="video" width="100%" height="auto" src="https://www.youtube.com/embed/a27Q0LlNZSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen">
                         </iframe>
                     </div>
 

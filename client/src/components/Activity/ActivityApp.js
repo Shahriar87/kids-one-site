@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { DashBoard } from './DashBoard';
 import { Highlight } from './Highlight';
 import { BookList } from './BookList';
 import { Favorites } from './Favorites';
@@ -168,7 +167,6 @@ class ActivityApp extends Component {
   render() {
     return (
       <div className="app jumbotron text-center" style={styles.body}>
-        {/* <DashBoard queryObject={this.updateQuery} /> */}
 
         <Highlight data={this.state.visibility.favorites ?
           this.state.favorites[this.state.highlight] :

@@ -29,13 +29,8 @@ export const Highlight = ({ data, visibility, addFavorite, removeFavorite }) => 
 					</div>
 					<br />
 					<div className="row">
-						<div className="col-3">
-							<img src={data.imageLink} alt={data.title} style={styles.img} />
-						</div>
-						<div className="col-3">
-						</div>
-						<div className="col-6">
-							<a target="_blank" href={"https://famobi.com" + data.link}><button> Read More!</button></a>
+						<div className="card-body col-md-12 embed-responsive embed-responsive-16by9">
+							<iframe title="Game" className="embed-responsive-item" src={"https://famobi.com" + data.link}></iframe>					
 						</div>
 					</div>
 					<br />
