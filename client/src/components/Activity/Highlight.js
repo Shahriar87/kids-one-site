@@ -28,14 +28,10 @@ export const Highlight = ({ data, visibility, addFavorite, removeFavorite }) => 
 						<h2>{data.title}</h2>
 					</div>
 					<br />
+
 					<div className="row">
-						<div className="col-3">
-							<img src={"//play.fisher-price.com" + data.imageLink} alt={data.title} style={styles.img} />
-						</div>
-						<div className="col-3">
-						</div>
-						<div className="col-6">
-							<a target="_blank" href={"//play.fisher-price.com" + data.link}><button> Read More!</button></a>
+						<div className="card-body col-md-12 embed-responsive embed-responsive-16by9">
+							<iframe title="Game" className="embed-responsive-item" src={"//play.fisher-price.com" + data.link}></iframe>					
 						</div>
 					</div>
 					<br />

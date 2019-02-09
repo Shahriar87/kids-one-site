@@ -7,23 +7,17 @@ class GameBody extends Component {
         return (
             <div>
                 <div className="row cont">
-                    <div className="col-sm-5">
-                        <div className="card">
-                            <div className="card-header">
-                                Top Games
-                            </div>
-                            <div className="card-body">
-                                <GameApp />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-7">
+                    <div className="col-sm-12">
                         <div className="card">
                             <div className="card-header">
                                 Game
                             </div>
-                            <div className="card-body col-md-12 embed-responsive embed-responsive-16by9">
-                                {/* <iframe title="Game" className="embed-responsive-item" src="https://games.cdn.famobi.com/html5games/s/street-ball-star/v090/?fg_domain=play.famobi.com&fg_aid=A1000-111&fg_uid=c893b0c6-fefb-4218-b63e-97a976d20401&fg_pid=e37ab3ce-88cd-4438-9b9c-a37df5d33736&fg_beat=087&original_ref=https%3A%2F%2Fplay.famobi.com%2Fstreet-ball-star"></iframe> */}
+                            {/* <div className="card-body col-md-12 embed-responsive embed-responsive-16by9">
+                                <iframe title="Game" className="embed-responsive-item" src="https://games.cdn.famobi.com/html5games/s/street-ball-star/v090/?fg_domain=play.famobi.com&fg_aid=A1000-111&fg_uid=c893b0c6-fefb-4218-b63e-97a976d20401&fg_pid=e37ab3ce-88cd-4438-9b9c-a37df5d33736&fg_beat=406&original_ref=https%3A%2F%2Fgames.cdn.famobi.com%2Fhtml5games%2Fs%2Fstreet-ball-star%2Fv090%2F%3Ffg_domain%3Dplay.famobi.com%26fg_aid%3DA1000-111%26fg_uid%3Dc893b0c6-fefb-4218-b63e-97a976d20401%26fg_pid%3De37ab3ce-88cd-4438-9b9c-a37df5d33736%26fg_beat%3D388%26original_ref%3Dhttps%253A%252F%252Fplay.famobi.com%252Fhtml5game%252Fc893b0c6-fefb-4218-b63e-97a976d20401%252FA1000-11"></iframe>
+                            </div> */}
+
+                            <div className="card-body">
+                                <GameApp />
                             </div>
                         </div>
                     </div>
