@@ -24,7 +24,7 @@ const localStyles = {
     alignItems: 'center',
   },
   input: {
-    width: 344,
+    width: 400,
     height: 40,
     margin: '15px 0',
   },

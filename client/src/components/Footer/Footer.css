@@ -1,1 +1,11 @@
-        1 file(s) copied.
+        
+
+        footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 40px;
+                margin: 0 auto;
+                background-color: #5f5ba7;
+                border-top: solid 3px #FFF10D;
+              }
