@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Highlight } from './Highlight';
+import  Highlight  from './Highlight';
 import { BookList } from './BookList';
 import { Favorites } from './Favorites';
 import { Menu } from './Menu';
@@ -74,6 +74,7 @@ class ActivityApp extends Component {
 
   // ----- Detail info about selected books
   updateHighlight(highlight) {
+    console.log(highlight.highlight)
     this.setState({
       highlight: highlight.highlight,
       visibility: {
@@ -144,7 +145,7 @@ class ActivityApp extends Component {
     // ----- Fetching favourites
     axios.get('/api/favorites')
       .then(response => {
-        console.log('Fetched from mongo', response.data);
+        // console.log('Fetched from mongo', response.data);
         this.setState({
           favorites: response.data
         })
@@ -168,7 +169,8 @@ class ActivityApp extends Component {
     return (
       <div className="app jumbotron text-center" style={styles.body}>
 
-        <Highlight data={this.state.visibility.favorites ?
+        <Highlight 
+          data={this.state.visibility.favorites ?
           this.state.favorites[this.state.highlight] :
           this.state.items[this.state.highlight]}
           visibility={this.state.visibility}

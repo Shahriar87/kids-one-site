@@ -5,6 +5,7 @@ export const BookRow = ({ rowNumber, title, imageLink, link, highlight }) => {
 
 	// Scroll to the top of UI when user selects an entry
 	const click = () => {
+		console.log(highlight, rowNumber);
 		highlight({
 			highlight: rowNumber
 		})
