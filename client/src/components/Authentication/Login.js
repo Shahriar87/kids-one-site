@@ -24,7 +24,7 @@ const localStyles = {
     alignItems: 'center',
   },
   input: {
-    width: 344,
+    width: 400,
     height: 40,
     margin: '15px 0',
   },
@@ -54,7 +54,7 @@ const Login = ({
   goToSignupCustomLabel,
   submitLoginCustomLabel,
 }) => (
-  <section id="login-form" style={Object.assign({}, localStyles.wrapper, styles.wrapper)}>
+  <section id="login-form" style={localStyles.wrapper}>
     <div id="fields" style={Object.assign({}, localStyles.inputWrapper, styles.inputWrapper)}>
       <input
         style={Object.assign({}, localStyles.input, styles.input)}

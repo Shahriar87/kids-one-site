@@ -117,7 +117,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 
 const AuthButton = withRouter(({ history }) => (
   authFunc.isAuthenticated ? (
-    <p>
+    <p className ="signout_button">
       Welcome! <button onClick={() => {
         authFunc.signout(() => history.push('/auth'))
       }}>Sign out</button>

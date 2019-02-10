@@ -115,7 +115,7 @@ class ReactSignupLoginComponent extends React.Component {
         id="main-wrapper"
         style={Object.assign(styles.wrapper, this.props.styles.mainWrapper)}
       >
-        <h1 style={Object.assign(styles.title, this.props.styles.mainTitle)}>{this.props.title}</h1>
+        <h1 id="login_title" className="outline" style={Object.assign(styles.title, this.props.styles.mainTitle)}>{this.props.title}</h1>
         <div style={Object.assign(styles.flipper, this.props.styles.flipper)}>{showCard()}</div>
       </section>
     );

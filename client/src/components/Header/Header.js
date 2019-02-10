@@ -6,8 +6,9 @@ import { Navbar, Nav } from 'react-bootstrap';
 class Header extends Component {
     render() {
         return (
-            <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">KidKlub</Navbar.Brand>
+            <Navbar id="nav_main" expand="lg">
+                <Navbar.Brand id="nav_brad" className="shadow" href="#home">Welcome to KidKlub!</Navbar.Brand>
+                <img src=""></img>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">

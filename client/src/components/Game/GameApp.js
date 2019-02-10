@@ -166,7 +166,7 @@ class GameApp extends Component {
 
   render() {
     return (
-      <div className="app jumbotron text-center" style={styles.body}>
+      <div  id ="game_background" className="app jumbotron text-center" >
 
         <Highlight data={this.state.visibility.favorites ?
           this.state.favorites[this.state.highlight] :
