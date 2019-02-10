@@ -78,9 +78,10 @@ const Login = ({
     <div style={Object.assign({}, localStyles.buttonsWrapper, styles.buttonsWrapper)}>
    
       <button
+        className="btn btn-primary btn-lg outline"
         id="signup-button"
         type="button"
-        style={Object.assign({}, localStyles.button, styles.button)}
+        // style={Object.assign({}, localStyles.button, styles.button)}
         onClick={() => {
           handleShowSignup('isLogin', false);
         }}
@@ -88,11 +89,12 @@ const Login = ({
         {goToSignupCustomLabel}
       </button>
       <input
+        className="btn btn-primary btn-lg outline"
         id="submit-login"
         name="submit-login"
         value={submitLoginCustomLabel}
         type="submit"
-        style={Object.assign({}, localStyles.button, styles.button)}
+        // style={Object.assign({}, localStyles.button, styles.button)}
         onClick={handleLogin}
       />
     </div>
