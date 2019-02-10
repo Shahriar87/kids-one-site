@@ -165,7 +165,7 @@ ReactSignupLoginComponent.defaultProps = {
   usernameCustomLabel: 'Username',
   passwordCustomLabel: 'Password',
   passwordConfirmationCustomLabel: 'Confirm password',
-  goToSignupCustomLabel: 'Create Account',
+  goToSignupCustomLabel: 'Create',
   goToLoginCustomLabel: 'Login',
   submitLoginCustomLabel: 'Signin',
   submitSignupCustomLabel: 'Signup',
