@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-image: url("../src/Assets/Images/Rainbow.svg");
+  background-image: url("../src/Assets/Images/Dots.svg");
   background-size: cover;
 }
 .cont {
@@ -141,5 +141,50 @@ body,
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 6.5%;
+} 
+
+#main-wrapper{
+  justify-content: center !important;
+  font-family: 'Luckiest Guy', cursive;
+  align-items: center !important;
+  background-color: #a4e8fd !important;
+  border: solid 3px #003d66 !important;
+  border-radius: 3% !important;
+  color: #f1545e !important;
+}
+
+.outline {
+	/* text-shadow:; */
+		
+}
+
+#login_title{
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+.navlogo{
+  background-image: url("./Assets/Images/bitmoji/Stephen.png");
+  border: 1px solid black ;  
+  z-index:3 !important;
+}
+
+#nav_brad{
+  font-family: 'Luckiest Guy', cursive;
+  color: #f1545e !important;
+  text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+
+#nav_main{
+  height: 30px;
+  border-bottom: solid 2px #f1545e
 }
