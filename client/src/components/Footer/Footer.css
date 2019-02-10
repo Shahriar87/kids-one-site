@@ -4,8 +4,8 @@
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                height: 40px;
+                height: 15px !important;
                 margin: 0 auto;
                 background-color: #5f5ba7;
-                border-top: solid 3px #FFF10D;
+                border-top: solid 1.5px #f1545e;
               }
