@@ -4,13 +4,6 @@ code {
 }
 
 
-
-
-.signout_button {
-  background-color: #75AECC;
-  margin-bottom: 0px;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -18,11 +11,11 @@ body {
   background-image: url("../src/Assets/Images/Dots.svg");
   background-size: cover;
 }
+
 .cont {
 
   border: 1px;
 }
-
 
 
 
@@ -124,8 +117,18 @@ input[type="password"],
   border-radius: 0px;
 }
 
+#signup-button {
+  background-color: #f1545e !important;
+}
 
-/* Login Page Style */
+
+#login-button{
+  background-color: #f1545e !important;
+}
+ 
+
+
+
 
 html,
 body,
@@ -142,9 +145,9 @@ body,
   display: flex;
   justify-content: center;
   margin-top: 6.5%;
-} 
+}
 
-#main-wrapper{
+#main-wrapper {
   justify-content: center !important;
   font-family: 'Luckiest Guy', cursive;
   align-items: center !important;
@@ -152,39 +155,57 @@ body,
   border: solid 3px #003d66 !important;
   border-radius: 3% !important;
   color: #f1545e !important;
+  height: 350px !important;
 }
 
-.outline {
-	/* text-shadow:; */
-		
-}
 
-#login_title{
+/* nav */
+
+#login_title {
   text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
-.navlogo{
+
+
+/* MISC */
+.outline {
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+}
+
+
+
+.navlogo {
   background-image: url("./Assets/Images/bitmoji/Stephen.png");
-  border: 1px solid black ;  
-  z-index:3 !important;
+  border: 1px solid black;
+  z-index: 3 !important;
 }
 
-#nav_brad{
+#nav_brad {
   font-family: 'Luckiest Guy', cursive;
   color: #f1545e !important;
   text-shadow:
-		-1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 
-#nav_main{
+#nav_main {
   height: 30px;
   border-bottom: solid 2px #f1545e
+}
+
+.signout_button {
+  background-color: #75AECC;
+  margin-bottom: 0px;
 }
