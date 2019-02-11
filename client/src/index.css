@@ -126,10 +126,6 @@ input[type="password"],
   background-color: #f1545e !important;
 }
  
-
-
-
-
 html,
 body,
 #root {
@@ -184,7 +180,7 @@ body,
 
 
 .navlogo {
-  background-image: url("./Assets/Images/bitmoji/Stephen.png");
+  background-image: url("./Assets/Images/bitmoji/stephen.png");
   border: 1px solid black;
   z-index: 3 !important;
 }
@@ -209,3 +205,13 @@ body,
   background-color: #75AECC;
   margin-bottom: 0px;
 }
+
+
+/* Footer CSS */
+
+.wrapper{
+  height: calc(100% - 60px);
+}
+
+
+

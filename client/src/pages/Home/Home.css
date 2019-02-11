@@ -1,1 +1,4 @@
         /* 1 file(s) copied. */
+.wrapper{
+        height: calc(100% - 60px);
+}

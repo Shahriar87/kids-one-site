@@ -4,11 +4,12 @@ import GameBody from "../../components/GameBody/GameBody";
 import VideoBody from "../../components/VideoBody/VideoBody";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-// import MessengerApp from "../../components/Messenger/MessengerApp";
+import MessengerApp from "../../components/Messenger/MessengerApp";
 
 
 import { BrowserRouter as Router, Route,} from "react-router-dom";
 
+import "./Home.css"
 function Home(props) {
 
     let userName = props.userName
@@ -19,7 +20,7 @@ function Home(props) {
         <Router>
             <div>
                 <Header />
-                    <div className="row cont">
+                    <div className="row cont wrapper">
                         <div className="col-sm-9">
                             <Route exact path="/home" component={ContentBody} />
                             <Route exact path="/video" component={VideoBody} />
@@ -32,12 +33,12 @@ function Home(props) {
                                    <h4>Welcome <strong>{userName}!</strong></h4>
                                 </div>
                                 <div className="card-body">
-                                    {/* <MessengerApp {...props} userName={userName} /> */}
+                                    <MessengerApp {...props} userName={userName} />
                                 </div>
                             </div>
                         </div>
-                    </div>
-                <Footer />
+                    </div>            
+                {/* <Footer /> */}
             </div>
         </Router >
 

@@ -7,6 +7,7 @@ class Footer extends Component {
         return (
             <footer className="footer">
                 <div className="container mx-auto">
+                    <p>Copyright &copy; SPDCXS</p>
                 </div>
             </footer>
         );
