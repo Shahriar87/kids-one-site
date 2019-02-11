@@ -1,0 +1,10 @@
+.text_content {
+    /* background: white; */
+
+}
+
+#content{
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}

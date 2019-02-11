@@ -2,13 +2,6 @@ import PropTypes from 'prop-types';
 import { BookRow } from './BookRow';
 import React from 'react';
 
-const styles = {
-	img: {
-		width: "20.1%",
-		height: "10.2%"
-	},
-};
-
 export const BookList = ({ data, highlight, visibility }) => {
 
 	if (visibility && data[0] !== null) {
@@ -16,13 +9,12 @@ export const BookList = ({ data, highlight, visibility }) => {
 			<section id="book-list"
 				aria-label="List of searched books">
 				{data.map((entry, i) =>
-					<div id="game_list_BG" >
-						<img src={entry.imageLink} alt={entry.title}  style={styles.img} />
-
+					<div id="game_list_BG">
 						<BookRow		
 							key={i}
 							rowNumber={i}
 							title={entry.title}
+							imageLink={entry.imageLink}
 							highlight={highlight}
 						/>
 					</div>

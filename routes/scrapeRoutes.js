@@ -62,7 +62,7 @@ module.exports = (app) => {
 
     // ---- Scraping Kid's Activity
     app.post("/api/singleactivity", (req, res) => {
-        // console.log(req.body.activityLink)
+        // console.log(req.body)
         axios.get(req.body.activityLink).then(function (response) {
             var $ = cheerio.load(response.data);
             var singleActivity = [];
@@ -70,24 +70,16 @@ module.exports = (app) => {
                 var result = {};
 
                 result.data = $(this).html();
-                console.log(result.data)
+                // console.log(result.data)
 
                 singleActivity.push(result)
             })
 
             // ----- Send a message to the client
-            res.json(singleActivity)
+            res.json(singleActivity[0].data)
             // console.log(singleActivity);
         }).catch(err => { console.log(err) });
     });
-
-
-
-
-
-
-
-
 
 
 

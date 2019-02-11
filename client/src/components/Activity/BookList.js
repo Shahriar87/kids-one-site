@@ -2,13 +2,6 @@ import PropTypes from 'prop-types';
 import { BookRow } from './BookRow';
 import React from 'react';
 
-const styles = {
-	img: {
-		width: "20.1%",
-		height: "10.2%"
-	},
-};
-
 export const BookList = ({ data, highlight, visibility }) => {
 
 	if (visibility && data[0] !== null) {
@@ -17,12 +10,11 @@ export const BookList = ({ data, highlight, visibility }) => {
 				aria-label="List of searched books">
 				{data.map((entry, i) =>
 					<div>
-						<img src={"//play.fisher-price.com" + entry.imageLink} alt={entry.title}  style={styles.img} />
-
-						<BookRow		
+						<BookRow
 							key={i}
 							rowNumber={i}
 							title={entry.title}
+							imageLink={entry.imageLink}
 							highlight={highlight}
 						/>
 					</div>
