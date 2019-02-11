@@ -2,24 +2,21 @@ import React, { Component } from 'react';
 // import { PropTypes } from 'prop-types';
 import axios from 'axios';
 
+import './Highlight.css';
+
+const styles = {
+	img: {
+		width: "200%",
+		height: "auto"
+	},
+};
 
 export default class Highlight extends Component {
 
 	state = {
-		data: this.props.data,
-		visibility: this.props.visibility,
-		addFavorite: this.props.addFavorite,
-		removeFavorite: this.props.removeFavorite,
-
-
-		// activityLink: "http://play.fisher-price.com" + data.link
-
 		activityLink: "http://play.fisher-price.com" + "/en_US/GamesandActivities/Crafts/IceCreamConeClowns.html",
-
-		htmlBody: ''
+		htmlString: ''
 	}
-
-
 
 	addToFavorites = () => {
 		this.props.addFavorite(this.state.data);
@@ -27,61 +24,67 @@ export default class Highlight extends Component {
 
 	removeFromFavorites = () => {
 		this.props.removeFavorite(this.state.data);
-	};
+	}; 1
 
-	// console.log(data);
 
+	// ---- Scraping Activity Detail
 	fetchActivity = () => {
-		console.log(this.state.activityLink);
-
 		axios({
 			method: 'post',
 			url: 'api/singleactivity',
-			data: {activityLink: this.state.activityLink}
+			data: { activityLink: this.state.activityLink }
 		})
 			.then((res) => {
 				// console.log(res.data)
-
-				// this.statehtmlBody = res.data;
-				console.log(res.data)
-
 				this.setState({
-					htmlBody: res.data
+					htmlString: res.data
 				})
 
-				console.log(res.data);
-
-			}).catch((err) => {
+			})
+			.catch((err) => {
 				console.log('There was an error fetching data', err);
-			});
+			})
 	}
 
-	componentDidMount() {
-		console.log(this.state.activityLink);
-		this.fetchActivity()
+	// // ---- This resulted slower to render
+	// componentWillReceiveProps() {
+	// 	document.getElementById("content").innerHTML = '<p>Data Loading! Please Wait</p>';
+	// 	this.setState({
+	// 		activityLink: "http://play.fisher-price.com" + this.props.data.link
+	// 	}, this.fetchActivity)
+	// }
 
+	// ---- I get a faster result with these 2 on rendering 
+	componentDidMount() {
+		this.setState({
+			activityLink: "http://play.fisher-price.com" + this.props.data.link
+		}, this.fetchActivity)
+	}
+
+	componentDidUpdate() {
+		if (this.state.activityLink !== "http://play.fisher-price.com" + this.props.data.link) {
+			this.setState({
+				activityLink: "http://play.fisher-price.com" + this.props.data.link
+			}, this.fetchActivity)
+		}
 	}
 
 	render() {
+
 		if (this.props.visibility.highlight) {
-
-			console.log(this.state.htmlBody);
-
 			return (
 				<div>
-					<section className="card bg-info"
+					<section id="wrapperHighlight" 
 						aria-label="Book Detail">
 						<div className="bg-secondary">
 							<h2>{this.props.data.title}</h2>
 						</div>
 						<br />
-						<div className="row">
-							{/* <div className="card-body col-md-12 embed-responsive embed-responsive-16by9">
-								<iframe title="Game" className="embed-responsive-item" src={"//play.fisher-price.com" + data.link}></iframe>
-							</div> */}
-
-							{this.state.htmlBody}
-
+							<div className="col-4">
+								<img src={"//play.fisher-price.com" + this.props.data.imageLink} alt={this.props.data.title} style={styles.img} />
+							</div>
+						<br />
+						<div id="content" className="row" dangerouslySetInnerHTML={{ __html: this.state.htmlString }}>
 						</div>
 						<br />
 						<div className="bg-warning">

@@ -144,7 +144,7 @@ class GameApp extends Component {
     // ----- Fetching favourites
     axios.get('/api/favorites')
       .then(response => {
-        console.log('Fetched from mongo', response.data);
+        // console.log('Fetched from mongo', response.data);
         this.setState({
           favorites: response.data
         })

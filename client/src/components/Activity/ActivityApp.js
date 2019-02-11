@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import  Highlight  from './Highlight';
+import Highlight from './Highlight';
 import { BookList } from './BookList';
 import { Favorites } from './Favorites';
 import { Menu } from './Menu';
@@ -20,7 +20,7 @@ class ActivityApp extends Component {
       items: [
         null
       ],
-      highlight: 0,
+      highlight: null,
       visibility: {
         highlight: false,
         booklist: false,
@@ -41,21 +41,21 @@ class ActivityApp extends Component {
   // ----- Fetch data from activity API
   fetchQuery() {
     axios.get('api/activity')
-    .then((res) => {
-      // console.log(res);
-      res.data.forEach((item, i) => {
-        let element = {};
-        element.title = item.title;
-        element.imageLink = item.imageLink;
-        element.link = item.link;
+      .then((res) => {
+        // console.log(res);
+        res.data.forEach((item, i) => {
+          let element = {};
+          element.title = item.title;
+          element.imageLink = item.imageLink;
+          element.link = item.link;
 
-        this.setState(this.state.items.splice(i, 1, element));
-        // console.log(element);
-      })
-      
-    }).catch((err) => {
-      console.error('There was an error fetching data', err);
-    });
+          this.setState(this.state.items.splice(i, 1, element));
+          // console.log(element);
+        })
+
+      }).catch((err) => {
+        console.error('There was an error fetching data', err);
+      });
   }
 
   // ----- Updating the query based on query type selected
@@ -75,6 +75,7 @@ class ActivityApp extends Component {
   // ----- Detail info about selected books
   updateHighlight(highlight) {
     console.log(highlight.highlight)
+    // console.log(this.state.items[highlight.highlight])
     this.setState({
       highlight: highlight.highlight,
       visibility: {
@@ -166,16 +167,23 @@ class ActivityApp extends Component {
   }
 
   render() {
+
+    console.log(this.state.favorites[this.state.highlight])
+
     return (
       <div className="app jumbotron text-center" style={styles.body}>
+        {this.state.items[this.state.highlight] ?
+          <Highlight
+            data={
+              this.state.visibility.favorites ?
+                this.state.favorites[this.state.highlight] :
+                this.state.items[this.state.highlight]}
 
-        <Highlight 
-          data={this.state.visibility.favorites ?
-          this.state.favorites[this.state.highlight] :
-          this.state.items[this.state.highlight]}
-          visibility={this.state.visibility}
-          addFavorite={this.addFavorite}
-          removeFavorite={this.removeFavorite} />
+            visibility={this.state.visibility}
+            addFavorite={this.addFavorite}
+            removeFavorite={this.removeFavorite}
+          /> :
+          null}
 
         <div className="card">
           <ul className="list-group list-group-flush">
