@@ -24,7 +24,7 @@ const localStyles = {
     alignItems: 'center',
   },
   input: {
-    width: 344,
+    width: 400,
     height: 40,
     margin: '15px 0',
   },
@@ -54,7 +54,7 @@ const Login = ({
   goToSignupCustomLabel,
   submitLoginCustomLabel,
 }) => (
-  <section id="login-form" style={Object.assign({}, localStyles.wrapper, styles.wrapper)}>
+  <section id="login-form" style={localStyles.wrapper}>
     <div id="fields" style={Object.assign({}, localStyles.inputWrapper, styles.inputWrapper)}>
       <input
         style={Object.assign({}, localStyles.input, styles.input)}
@@ -78,9 +78,10 @@ const Login = ({
     <div style={Object.assign({}, localStyles.buttonsWrapper, styles.buttonsWrapper)}>
    
       <button
+        className="btn btn-primary btn-lg outline"
         id="signup-button"
         type="button"
-        style={Object.assign({}, localStyles.button, styles.button)}
+        // style={Object.assign({}, localStyles.button, styles.button)}
         onClick={() => {
           handleShowSignup('isLogin', false);
         }}
@@ -88,11 +89,12 @@ const Login = ({
         {goToSignupCustomLabel}
       </button>
       <input
+        className="btn btn-primary btn-lg outline"
         id="submit-login"
         name="submit-login"
         value={submitLoginCustomLabel}
         type="submit"
-        style={Object.assign({}, localStyles.button, styles.button)}
+        // style={Object.assign({}, localStyles.button, styles.button)}
         onClick={handleLogin}
       />
     </div>

@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import './Highlight.css';
 
+
 const styles = {
 	img: {
 		width: "200%",
@@ -105,6 +106,7 @@ export default class Highlight extends Component {
 
 
 }
+
 
 
 

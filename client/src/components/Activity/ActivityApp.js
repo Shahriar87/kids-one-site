@@ -8,6 +8,7 @@ import axios from 'axios';
 const styles = {
   body: {
     background: "#e8eaf6"
+    
   },
 };
 

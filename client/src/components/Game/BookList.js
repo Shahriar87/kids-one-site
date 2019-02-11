@@ -9,7 +9,7 @@ export const BookList = ({ data, highlight, visibility }) => {
 			<section id="book-list"
 				aria-label="List of searched books">
 				{data.map((entry, i) =>
-					<div>
+					<div id="game_list_BG">
 						<BookRow		
 							key={i}
 							rowNumber={i}
