@@ -20,6 +20,7 @@ class ReactSignupLoginComponent extends React.Component {
       username: '',
       password: '',
       passwordConfirmation: '',
+      profilePic: '',
     };
   }
 
@@ -32,6 +33,7 @@ class ReactSignupLoginComponent extends React.Component {
       username: this.state.username,
       password: this.state.password,
       passwordConfirmation: this.state.passwordConfirmation,
+      profilePic: this.state.profilePic,
     });
   }
 
@@ -39,6 +41,7 @@ class ReactSignupLoginComponent extends React.Component {
     this.props.handleLogin({
       username: this.state.username,
       password: this.state.password,
+      profilePic: this.state.profilePic,
     });
   }
 
@@ -52,7 +55,6 @@ class ReactSignupLoginComponent extends React.Component {
         margin: 10,
         padding: 20,
         maxWidth: '500px',
-
         width: 500,
         height: 400,
         perspective: 1000,
@@ -70,6 +72,9 @@ class ReactSignupLoginComponent extends React.Component {
           ? '180'
           : '0'}deg)`,
       },
+      select: {
+        display: 'block',
+      },
     };
     const showCard = () => {
       if (this.state.isLogin && !this.state.isRecoveringPassword) {
@@ -83,6 +88,7 @@ class ReactSignupLoginComponent extends React.Component {
             handleChange={this.updateState}
             username={this.state.username}
             password={this.state.password}
+            profilePic={this.state.profilePic}
             usernameCustomLabel={this.props.usernameCustomLabel}
             passwordCustomLabel={this.props.passwordCustomLabel}
             goToSignupCustomLabel={this.props.goToSignupCustomLabel}
@@ -100,6 +106,7 @@ class ReactSignupLoginComponent extends React.Component {
             username={this.state.username}
             password={this.state.password}
             passwordConfirmation={this.state.passwordConfirmation}
+            profilePic={this.state.profilePic}
             usernameCustomLabel={this.props.usernameCustomLabel}
             passwordCustomLabel={this.props.passwordCustomLabel}
             passwordConfirmationCustomLabel={this.props.passwordConfirmationCustomLabel}

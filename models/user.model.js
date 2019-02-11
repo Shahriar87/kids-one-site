@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
     username: String,
     password: String,
+    profilePic: String,
     isDeleted: {
         type: Boolean,
         default: false

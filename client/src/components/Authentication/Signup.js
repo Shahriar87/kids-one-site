@@ -26,6 +26,7 @@ const localStyles = {
     width: 344,
     height: 40,
     margin: '15px 0',
+    display: 'block',
   },
   recoverPassword: {
     width: '100%',
@@ -35,6 +36,9 @@ const localStyles = {
     margin: '0 15px',
     padding: 15,
   },
+  select: {
+    display: 'block',
+  }
 };
 
 const Signup = ({
@@ -45,65 +49,80 @@ const Signup = ({
   username,
   password,
   passwordConfirmation,
+  profilePic,
   usernameCustomLabel,
   passwordCustomLabel,
   passwordConfirmationCustomLabel,
   goToLoginCustomLabel,
   submitSignupCustomLabel,
 }) => (
-  <section id="signup-form" style={Object.assign({}, localStyles.wrapper, styles.wrapper)}>
-    <div id="fields" style={Object.assign({}, localStyles.inputWrapper, styles.inputWrapper)}>
-      <input
-        style={Object.assign({}, localStyles.input, styles.input)}
-        type="text"
-        id="username"
-        name="username"
-        placeholder={usernameCustomLabel}
-        onChange={e => handleChange(e.target.name, e.target.value)}
-        value={username}
-      />
-      <input
-        style={Object.assign({}, localStyles.input, styles.input)}
-        type="password"
-        id="password"
-        name="password"
-        placeholder={passwordCustomLabel}
-        onChange={e => handleChange(e.target.name, e.target.value)}
-        value={password}
-      />
-      <input
-        style={Object.assign({}, localStyles.input, styles.input)}
-        type="password"
-        id="passwordConfirmation"
-        name="passwordConfirmation"
-        placeholder={passwordConfirmationCustomLabel}
-        onChange={e => handleChange(e.target.name, e.target.value)}
-        value={passwordConfirmation}
-      />
-    </div>
-    <div style={Object.assign({}, localStyles.buttonsWrapper, styles.buttonsWrapper)}>
-      <button
-        className="btn btn-primary btn-lg outline"
-        id="login-button"
-        type="button"
-        // style={Object.assign({}, localStyles.button, styles.button)}
-        onClick={() => {
-          handleShowLogin('isLogin', true);
-        }}
-      >
-        {goToLoginCustomLabel}
-      </button>
-      <input
-        className="btn btn-primary btn-lg outline"
-        id="submit-signup"
-        type="submit"
-        value={submitSignupCustomLabel}
-        // style={Object.assign({}, localStyles.button, styles.button)}
-        onClick={handleSignup}
-      />
-    </div>
-  </section>
-);
+    <section id="signup-form" style={Object.assign({}, localStyles.wrapper, styles.wrapper)}>
+      <div id="fields" style={Object.assign({}, localStyles.inputWrapper, styles.inputWrapper)}>
+        <input
+          style={Object.assign({}, localStyles.input, styles.input)}
+          type="text"
+          id="username"
+          name="username"
+          placeholder={usernameCustomLabel}
+          onChange={e => handleChange(e.target.name, e.target.value)}
+          value={username}
+        />
+        <input
+          style={Object.assign({}, localStyles.input, styles.input)}
+          type="password"
+          id="password"
+          name="password"
+          placeholder={passwordCustomLabel}
+          onChange={e => handleChange(e.target.name, e.target.value)}
+          value={password}
+        />
+        <input
+          style={Object.assign({}, localStyles.input, styles.input)}
+          type="password"
+          id="passwordConfirmation"
+          name="passwordConfirmation"
+          placeholder={passwordConfirmationCustomLabel}
+          onChange={e => handleChange(e.target.name, e.target.value)}
+          value={passwordConfirmation}
+        />
+        <select style={Object.assign({}, localStyles.select, styles.select)}
+          type="text"
+          id="profilePic"
+          name="profilePic"
+          onChange={e => handleChange(e.target.name, e.target.value)}
+          value={profilePic}
+        >
+          <option value="https://i.imgur.com/UPKyokk.jpg">Shah</option>
+          <option value="https://i.imgur.com/NEtWrw8.png">Stephen</option>
+          <option value="https://i.imgur.com/HzIMxvW.jpg">Dante</option>
+          <option value="https://i.imgur.com/YTrNK7w.jpg">Xavier</option>
+          <option value="https://i.imgur.com/rNsAtyd.jpg">Chanda</option>
+          <option value="https://i.imgur.com/Ke7A6ML.png">Paul</option>
+        </select>
+      </div>
+      <div style={Object.assign({}, localStyles.buttonsWrapper, styles.buttonsWrapper)}>
+        <button
+          className="btn btn-primary btn-lg outline"
+          id="login-button"
+          type="button"
+          // style={Object.assign({}, localStyles.button, styles.button)}
+          onClick={() => {
+            handleShowLogin('isLogin', true);
+          }}
+        >
+          {goToLoginCustomLabel}
+        </button>
+        <input
+          className="btn btn-primary btn-lg outline"
+          id="submit-signup"
+          type="submit"
+          value={submitSignupCustomLabel}
+          // style={Object.assign({}, localStyles.button, styles.button)}
+          onClick={handleSignup}
+        />
+      </div>
+    </section>
+  );
 
 Signup.propTypes = {
   handleShowLogin: PropTypes.func.isRequired,
@@ -112,6 +131,7 @@ Signup.propTypes = {
   username: PropTypes.string.isRequired,
   password: PropTypes.string.isRequired,
   passwordConfirmation: PropTypes.string.isRequired,
+  profilePic: PropTypes.string.isRequired,
   styles: PropTypes.shape({
     wrapper: PropTypes.object,
     inputWrapper: PropTypes.object,

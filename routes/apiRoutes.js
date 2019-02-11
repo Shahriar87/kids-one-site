@@ -12,6 +12,9 @@ module.exports = app => {
         let {
             username
         } = body;
+        let {
+            profilePic
+        } = body;
 
         if (!username) {
             return res.send({
@@ -49,6 +52,8 @@ module.exports = app => {
             const newUser = new User();
             newUser.username = username;
             newUser.password = newUser.generateHash(password);
+            newUser.profilePic = profilePic;
+
             newUser.save((err, user) => {
                 if (err) {
                     return res.send({
@@ -110,6 +115,7 @@ module.exports = app => {
                 });
             }
             // ---- Otherwise correct user
+            profilePic = user.profilePic;
             const userSession = new UserSession();
             userSession.userId = user._id;
             userSession.save((err, doc) => {
@@ -125,8 +131,9 @@ module.exports = app => {
                     message: 'Valid sign in',
                     token: doc._id
                 });
+                // return res.json(user)
             });
-        });
+        })
     });
 
     app.get('/api/account/logout', (req, res, next) => {

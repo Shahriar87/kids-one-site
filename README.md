@@ -1,12 +1,10 @@
-# Kids One Site (App is under construction!)
+# KidKlub!
 
 [Check the app](https://kidklub.herokuapp.com/)
 
-## About This Boilerplate
+## Project Brief
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
-
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+A MERN Stack complex web application which can be used as a student portal and activity hub by any elementary & middle school
 
 ## Starting the app locally
 

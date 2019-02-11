@@ -5,16 +5,23 @@ import VideoBody from "../../components/VideoBody/VideoBody";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import MessengerApp from "../../components/Messenger/MessengerApp";
-
-
 import { BrowserRouter as Router, Route,} from "react-router-dom";
-
 import "./Home.css"
+
+const styles = {
+	img: {
+		width: "50%",
+		height: "auto"
+	},
+};
+
+
 function Home(props) {
 
     let userName = props.userName
+    let profilePic = props.profilePic
 
-    console.log(userName);
+    console.log(profilePic);
 
     return (
         <Router>
@@ -31,6 +38,7 @@ function Home(props) {
                                 <div className="card-header">
                                    <h5>Messenger</h5> 
                                    <h4>Welcome <strong>{userName}!</strong></h4>
+                                   <img src={profilePic} alt={userName} style={styles.img} />
                                 </div>
                                 <div className="card-body">
                                     <MessengerApp {...props} userName={userName} />

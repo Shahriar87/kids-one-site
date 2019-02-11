@@ -25,6 +25,7 @@ const authFunc = {
 }
 
 let userName = '';
+let profilePic = '';
 
 // ---- Stateful Login Component
 class Login extends React.Component {
@@ -43,7 +44,9 @@ class Login extends React.Component {
         if (res.data.success) {
           authFunc.isAuthenticated = true
           userName = data.username
+          profilePic = data.profilePic
           console.log(userName)
+          console.log(data)
         } else {
           authFunc.isAuthenticated = false
           alert(res.data.message)
@@ -65,6 +68,8 @@ class Login extends React.Component {
         if (res.data.success) {
           authFunc.isAuthenticated = true
           userName = data.username
+          profilePic = data.profilePic
+          console.log(profilePic)
         } else {
           authFunc.isAuthenticated = false
           alert(res.data.message)
@@ -107,7 +112,7 @@ class Login extends React.Component {
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
     authFunc.isAuthenticated === true
-      ? <Component {...props} userName={userName}/>   // Passing username as props
+      ? <Component {...props} userName={userName} profilePic={profilePic}/>   // Passing username & profilePic as props
       : <Redirect to={{
         pathname: '/auth',
         state: { from: props.location }

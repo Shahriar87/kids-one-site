@@ -23,6 +23,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+// MAKING STATIC ROUTE TO USE CSS & JS
+app.use(express.static("client/src/Assets"));
+
 // Define API routes here
 require("./routes/apiRoutes")(app, express);
 require("./routes/scrapeRoutes")(app);
