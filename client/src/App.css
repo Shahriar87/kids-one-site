@@ -108,3 +108,14 @@ footer {
   /* background-image: url("./Assets/Images/1115.png") !important; */
   background: #282c34;
 }
+
+
+/* MISC */
+.kidklub{
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    color: #f1545e;
+}
