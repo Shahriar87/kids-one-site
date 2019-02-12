@@ -8,6 +8,8 @@ body {
   right: 0;
   padding: 0;
   margin: 0;
+
+
 }
 
 .App {
@@ -60,10 +62,10 @@ body {
 }
 
 footer {
-  /* position: absolute; */
-  /* bottom: 0; */
+  bottom: 0;
+  position: fixed;
   width: 100%;
-  height: 30px;
+  height: 20px;
   margin: 0 auto;
   background-color: #5f5ba7;
   border-top: solid 1.5px #f1545e;
@@ -111,11 +113,11 @@ footer {
 
 
 /* MISC */
-.kidklub{
+.kidklub {
   text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-    color: #f1545e;
+  color: #f1545e;
 }
