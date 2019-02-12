@@ -37,18 +37,20 @@ body {
   /* border-top: #FFF10D solid 3px; */
   color: white !important;
   margin-bottom: 1%;
-  
+
 }
+
 /* PAGES */
 
 /* LOGIN */
 
 /* HOME */
 
-#school_announcment_header{
-background-image: url("./Assets/Images/non-bg/Canva\ -\ Yellow\ School\ Bus.jpg");
-background-size: cover;
+#school_announcment_header {
+  background-image: url("./Assets/Images/non-bg/Canva\ -\ Yellow\ School\ Bus.jpg");
+  background-size: cover;
 }
+
 /* GAME */
 
 /* VIDEO */
@@ -58,12 +60,14 @@ background-size: cover;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
   width: 100%;
-  height: 20px;
+  height: 30px;
   margin: 0 auto;
   background-color: #5f5ba7;
+  border-top: solid 1.5px #f1545e;
+  text-align: center;
 }
 
 .card-header {
@@ -72,9 +76,9 @@ footer {
   font-family: 'Luckiest Guy', cursive;
 }
 
-#school_annoucments{
+#school_annoucments {
   /* background-color: #FFF10D; */
-  background-image:  url("./Assets/Images/paper.svg") !important;
+  background-image: url("./Assets/Images/paper.svg") !important;
   background-size: contain;
   opacity: 0.7;
   /* -webkit-background-size: cover; */
@@ -96,8 +100,8 @@ footer {
 /* Game */
 
 #game_background {
-/* background-image: url("./Assets/Images/1115.pngF"); */
-padding: 5%;
+  /* background-image: url("./Assets/Images/1115.pngF"); */
+  padding: 5%;
 }
 
 #game_list_BG {
