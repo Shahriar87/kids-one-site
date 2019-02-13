@@ -1,35 +1,13 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
-var ActivitySchema = new Schema({
-    title: {
-        type: String,
-        // required: true
-    },
-    brief: {
-        type: String,
-        // required: true
-    },
-    body: {
-        type: String,
-        // required: true
-    },
-    imageLink: {
-        type: String,
-        // required: true
-    },
-    link: {
-        type: String,
-        // required: true
-    },
-    isSaved: {
-        type: Boolean,
-        default: false,
-        required: true
-    }
+var activitySchema = new Schema({
+    title: String,
+    imageLink: String,
+    link: Number
 });
 
-var Activity = mongoose.model("Activity", ActivitySchema);
+var Activity = mongoose.model("Activity", activitySchema);
 
 // ----- Exporting Activity model
 module.exports = Activity;
