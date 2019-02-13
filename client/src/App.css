@@ -67,6 +67,12 @@ body {
   background-size: cover;
  }
 
+ #start_buttton{
+   margin-bottom: 20px;
+   border-radius: 3px;
+   background-color: #f1545e;
+ }
+
 /* GAME */
 
 

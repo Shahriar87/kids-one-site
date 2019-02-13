@@ -21,6 +21,7 @@ class Messages extends React.Component {
         <Message
           key={i}
           username={message.username}
+          profilePic={message.profilePic}
           message={message.message}
           fromMe={message.fromMe} />
       );

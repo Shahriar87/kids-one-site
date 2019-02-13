@@ -27,7 +27,7 @@ function Home(props) {
         <Router>
             <div>
                 <Header />
-                    <div className="row cont wrapper">
+                    <div className=" container row cont wrapper">
                         <div className="col-sm-9">
                             <Route exact path="/home" component={ContentBody} />
                             <Route exact path="/video" component={VideoBody} />
@@ -41,7 +41,7 @@ function Home(props) {
                                    <img className="img-fluid img-thumbnail mx-auto d-block" src={profilePic} alt={userName} />
                                 </div>
                                 <div className=" no_pad card-body">
-                                    <MessengerApp {...props} userName={userName} />
+                                    <MessengerApp {...props} userName={userName} profilePic={profilePic} />
                                 </div>
                             </div>
                         </div>

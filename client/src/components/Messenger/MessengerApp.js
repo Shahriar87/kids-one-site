@@ -10,24 +10,36 @@ class MessengerApp extends React.Component {
   constructor(props) {
     super(props);
     // set the initial state of the application
-    this.state = { username: this.props.userName };
+    this.state = {
+      username: this.props.userName,
+      profilePic: this.props.profilePic
+    };
 
     // bind the 'this' keyword to the event handlers
     this.usernameChangeHandler = this.usernameChangeHandler.bind(this);
     this.usernameSubmitHandler = this.usernameSubmitHandler.bind(this);
 
-    console.log(this.state.username)
+    // console.log(this.state.username)
 
   }
 
 
   usernameChangeHandler(event) {
-    this.setState({ username: this.state.username });
+    this.setState({
+      username: this.state.username,
+      profilePic: this.state.profilePic
+    });
   }
 
   usernameSubmitHandler(event) {
     event.preventDefault();
-    this.setState({ submitted: true, username: this.element.value });
+    this.setState({
+      submitted: true,
+      username: this.uName.value,
+      profilePic: this.pPic.value
+    });
+    console.log(this.pPic.value)
+
   }
 
 
@@ -36,7 +48,7 @@ class MessengerApp extends React.Component {
     if (this.state.submitted) {
       // Form was submitted, now show the main App
       return (
-        <ChatApp username={this.state.username} />
+        <ChatApp username={this.state.username} profilePic={this.state.profilePic} />
       );
     }
 
@@ -49,12 +61,21 @@ class MessengerApp extends React.Component {
             type="text"
             onChange={this.usernameChangeHandler}
             value={this.state.username}
-            ref={el => this.element = el}
+            ref={el => this.uName = el}
+            required
+            hidden
+          />
+          <input
+            type="text"
+            onChange={this.usernameChangeHandler}
+            value={this.state.profilePic}
+            ref={el => this.pPic = el}
             required
             hidden
           />
         </div>
-        <input type="submit" value="Start Chat?" />
+        <input id="start_buttton" className="kidklub" type="submit" value=" Start Chat?"/>
+.
       </form>
     );
   }

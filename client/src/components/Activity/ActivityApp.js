@@ -191,7 +191,8 @@ class ActivityApp extends Component {
             <BookList
               data={this.state.items}
               highlight={this.updateHighlight}
-              visibility={this.state.visibility.booklist} />
+              visibility={this.state.visibility.booklist} 
+              />
           </ul>
         </div>
 
