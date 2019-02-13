@@ -44,7 +44,7 @@ class Login extends React.Component {
         if (res.data.success) {
           authFunc.isAuthenticated = true
           userName = data.username
-          profilePic = data.profilePic
+          profilePic = res.data.profilePic
           console.log(userName)
           console.log(data)
         } else {

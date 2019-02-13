@@ -92,7 +92,8 @@ const Signup = ({
           onChange={e => handleChange(e.target.name, e.target.value)}
           value={profilePic}
         >
-          <option value="https://i.imgur.com/UPKyokk.jpg">Shah</option>
+          <option value="">Select a character</option>
+          <option value="https://i.imgur.com/KNS1anH.jpg">Shah</option>
           <option value="https://i.imgur.com/NEtWrw8.png">Stephen</option>
           <option value="https://i.imgur.com/HzIMxvW.jpg">Dante</option>
           <option value="https://i.imgur.com/YTrNK7w.jpg">Xavier</option>

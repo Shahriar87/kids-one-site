@@ -115,7 +115,9 @@ module.exports = app => {
                 });
             }
             // ---- Otherwise correct user
-            profilePic = user.profilePic;
+            // const profilePic = user.profilePic;
+            // console.log(user);
+            
             const userSession = new UserSession();
             userSession.userId = user._id;
             userSession.save((err, doc) => {
@@ -129,7 +131,8 @@ module.exports = app => {
                 return res.send({
                     success: true,
                     message: 'Valid sign in',
-                    token: doc._id
+                    token: doc._id,
+                    profilePic : user.profilePic
                 });
                 // return res.json(user)
             });

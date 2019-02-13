@@ -37,16 +37,16 @@ function Home(props) {
                             <div className="card">
                                 <div className="card-header">
                                    <h5>Messenger</h5> 
-                                   <h4>Welcome <strong>{userName}!</strong></h4>
-                                   <img src={profilePic} alt={userName} style={styles.img} />
+                                   <h4>Welcome <span className="kidklub"><strong>{userName}!</strong></span></h4>
+                                   <img className="img-fluid img-thumbnail mx-auto d-block" src={profilePic} alt={userName} />
                                 </div>
                                 <div className="card-body">
-                                    <MessengerApp {...props} userName={userName} />
+                                    <MessengerApp {...props} userName={userName} profilePic={profilePic} />
                                 </div>
                             </div>
                         </div>
                     </div>            
-                {/* <Footer /> */}
+                <Footer />
             </div>
         </Router >
 
