@@ -1,0 +1,12 @@
+.row {
+    height: 100px;
+    margin: auto;
+    float: center;
+}
+.col-sm {
+    float: center;
+    margin: auto;
+} 
+#card-body {
+    margin: auto;
+}
