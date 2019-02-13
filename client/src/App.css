@@ -33,13 +33,17 @@ body {
 }
 
 .navbar {
-  background-color: #5f5ba7 !important;
+  /* background-color: #5f5ba7 !important; */
   width: 100%;
   /* border-bottom: #FFF10D solid 3px; */
   /* border-top: #FFF10D solid 3px; */
   color: white !important;
   margin-bottom: 1%;
+}
 
+#nav_main {
+  z-index: 7;
+  background-color: #5f5ba7;
 }
 
 /* PAGES */
@@ -51,6 +55,8 @@ body {
 #school_announcment_header {
   background-image: url("./Assets/Images/non-bg/Canva\ -\ Yellow\ School\ Bus.jpg");
   background-size: cover;
+  /* z-index: -5; */
+
 }
 
 /* GAME */
