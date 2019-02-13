@@ -1,0 +1,31 @@
+#nav_main {
+    background-color: rgb(29, 29, 70);
+    color: white;
+    height: 70px;
+    margin: 0px;
+}
+.navigation {
+    color: white;
+    font-size: 20px;
+}
+.navigation:hover {
+    color: rgb(255, 94, 94);
+}
+#games {
+    color: white;
+    font-size: 20px;
+}
+#games:hover {
+    color: rgb(255, 94, 94);
+}
+#video {
+    color: white;
+    font-size: 20px;
+}
+#video:hover {
+color: rgb(255, 94, 94);
+}
+#logo {
+    height: 70px;
+    float: left;
+}
