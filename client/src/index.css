@@ -10,6 +10,7 @@ body {
   font-family: sans-serif;
   background-image: url("../src/Assets/Images/Dots.svg");
   background-size: cover;
+
 }
 
 .cont {
@@ -122,10 +123,10 @@ input[type="password"],
 }
 
 
-#login-button{
+#login-button {
   background-color: #f1545e !important;
 }
- 
+
 html,
 body,
 #root {
@@ -209,9 +210,6 @@ body,
 
 
 
-.wrapper{
+.wrapper {
   height: calc(100% - 60px);
 }
-
-
-
