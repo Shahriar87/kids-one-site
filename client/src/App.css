@@ -62,9 +62,21 @@ body {
   /* z-index: -5; */
 
 }
+.list-group-item{
+  /* background-image: url("./Assets/Images/red.svg");  */
+  background-size: cover;
+ }
 
 /* GAME */
 
+
+
+
+
+
+#book-list{
+  /* background-image: url("./Assets/Images/red.svg"); */
+}
 /* VIDEO */
 
 .App-link {
@@ -75,17 +87,20 @@ footer {
   bottom: 0;
   position: fixed;
   width: 100%;
-  height: 20px;
+  height: 35px;
   margin: 0 auto;
   background-color: #5f5ba7;
   border-top: solid 1.5px #f1545e;
   text-align: center;
+  color: white !important;
 }
 
 .card-header {
   background-color: #75AECC;
   /* text-align: auto !important; */
   font-family: 'Luckiest Guy', cursive;
+  text-align: center;
+  border-bottom: 2px grey solid;
 }
 
 #school_annoucments {
@@ -130,6 +145,7 @@ footer {
     -1px 1px 0 #000,
     1px 1px 0 #000;
   color: #f1545e;
+  
 }
 
 .no_pad{
@@ -137,3 +153,8 @@ footer {
 }
 
 
+
+
+h5{
+  text-align: center;
+}
