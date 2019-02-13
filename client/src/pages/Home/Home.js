@@ -37,7 +37,7 @@ function Home(props) {
                             <div className="card">
                                 <div className="card-header">
                                    <h5>Messenger</h5> 
-                                   <h4>Welcome <span className="kidklub"><strong>{userName}!</strong></span></h4>
+                                   <h4><span className="kidklub"><strong>{userName}!</strong></span></h4>
                                    <img className="img-fluid img-thumbnail mx-auto d-block" src={profilePic} alt={userName} />
                                 </div>
                                 <div className=" no_pad card-body">
