@@ -140,8 +140,7 @@ module.exports = app => {
         })
     });
 
-    // ----- 
-
+    // ----- Adding favorites
     app.post('/api/favorites/activities', (req, res) => {
         const activity = new Activity();
         activity.title = req.body.title,
@@ -161,6 +160,7 @@ module.exports = app => {
         })
     })
 
+    // ----- Fetching favorites
     app.get('/api/favorites/activities', (req, res) => {
         Activity.find((err, activities) => {
             if (err) { res.send(err) }
@@ -168,6 +168,7 @@ module.exports = app => {
         })
     })
 
+    // ----- Deleting favorites
     app.delete('/api/favorites/activities/:id', (req, res) => {
         Activity.remove({ _id: req.params.id }, err => {
             if (err) { res.send(err) }
