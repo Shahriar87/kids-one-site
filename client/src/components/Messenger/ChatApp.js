@@ -32,6 +32,7 @@ class ChatApp extends React.Component {
   sendHandler(message) {
     const messageObject = {
       username: this.props.username,
+      profilePic: this.props.profilePic,
       message
     };
 

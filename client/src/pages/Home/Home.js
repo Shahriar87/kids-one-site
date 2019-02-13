@@ -41,7 +41,7 @@ function Home(props) {
                                    <img className="img-fluid img-thumbnail mx-auto d-block" src={profilePic} alt={userName} />
                                 </div>
                                 <div className="card-body">
-                                    <MessengerApp {...props} userName={userName} />
+                                    <MessengerApp {...props} userName={userName} profilePic={profilePic} />
                                 </div>
                             </div>
                         </div>

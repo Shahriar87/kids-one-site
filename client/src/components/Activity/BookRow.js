@@ -23,9 +23,11 @@ export const BookRow = ({ rowNumber, title, imageLink, link, highlight }) => {
 	return (
 		<div>
 			<div onClick={click} className="list-group-item">
-				<img src={"//play.fisher-price.com" + imageLink} alt={title} style={styles.img} />
-				<br />
-				<span>{title}</span>
+				
+					<img src={"//play.fisher-price.com" + imageLink} alt={title} style={styles.img} />
+					<br />
+					<span>{title}</span>
+				
 			</div>
 			<br />
 		</div>
