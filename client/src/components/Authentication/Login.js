@@ -58,7 +58,7 @@ const Login = ({
     <div id="fields" style={Object.assign({}, localStyles.inputWrapper, styles.inputWrapper)}>
       <input
         style={Object.assign({}, localStyles.input, styles.input)}
-        type="text"
+        type="username"
         id="username"
         name="username"
         placeholder={usernameCustomLabel}
@@ -78,7 +78,7 @@ const Login = ({
     <div style={Object.assign({}, localStyles.buttonsWrapper, styles.buttonsWrapper)}>
    
       <button
-        className="btn btn-primary btn-lg outline"
+        className="btn btn-primary btn-lg outline authButton"
         id="signup-button"
         type="button"
         // style={Object.assign({}, localStyles.button, styles.button)}
@@ -89,12 +89,12 @@ const Login = ({
         {goToSignupCustomLabel}
       </button>
       <input
-        className="btn btn-primary btn-lg outline"
+        className="btn btn-primary btn-lg outline authButton"
         id="submit-login"
         name="submit-login"
         value={submitLoginCustomLabel}
         type="submit"
-        // style={Object.assign({}, localStyles.button, styles.button)}
+        style={Object.assign({}, localStyles.button, styles.button)}
         onClick={handleLogin}
       />
     </div>

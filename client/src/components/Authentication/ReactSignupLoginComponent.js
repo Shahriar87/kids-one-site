@@ -49,14 +49,14 @@ class ReactSignupLoginComponent extends React.Component {
   render() {
     const styles = {
       wrapper: {
-        border: '1px solid #eee',
-        borderRadius: 3,
-        backgroundColor: '#FAFAFA',
+        border: 'solid 3px #003d66',
+        borderRadius: "3%",
+        backgroundColor: '#a4e8fd',
         margin: 10,
         padding: 20,
         maxWidth: '500px',
         width: 500,
-        height: 400,
+        height: 750,
         perspective: 1000,
       },
       title: {
@@ -75,6 +75,10 @@ class ReactSignupLoginComponent extends React.Component {
       select: {
         display: 'block',
       },
+      image: {
+        width: "auto",
+        height: "40%",
+      }
     };
     const showCard = () => {
       if (this.state.isLogin && !this.state.isRecoveringPassword) {
@@ -118,13 +122,17 @@ class ReactSignupLoginComponent extends React.Component {
 
     };
     return (
-      <section
-        id="main-wrapper"
-        style={Object.assign(styles.wrapper, this.props.styles.mainWrapper)}
-      >
-        <h1 id="login_title" className="outline" style={Object.assign(styles.title, this.props.styles.mainTitle)}>{this.props.title}</h1>
-        <div style={Object.assign(styles.flipper, this.props.styles.flipper)}>{showCard()}</div>
-      </section>
+      // <div>
+        <section
+          id="main-wrapper"
+          style={Object.assign(styles.wrapper, this.props.styles.mainWrapper)}
+          className="text-center"
+        >
+          <h1 id="login_title" className="outline" style={Object.assign(styles.title, this.props.styles.mainTitle)}>{this.props.title}</h1>
+          <img src="Images/kidklub.png" style={styles.image} alt="logo" />
+          <div style={Object.assign(styles.flipper, this.props.styles.flipper)}>{showCard()}</div>
+        </section>
+      // </div>
     );
   }
 }

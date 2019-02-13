@@ -60,7 +60,7 @@ const Signup = ({
       <div id="fields" style={Object.assign({}, localStyles.inputWrapper, styles.inputWrapper)}>
         <input
           style={Object.assign({}, localStyles.input, styles.input)}
-          type="text"
+          type="username"
           id="username"
           name="username"
           placeholder={usernameCustomLabel}
@@ -101,9 +101,10 @@ const Signup = ({
           <option value="https://i.imgur.com/Ke7A6ML.png">Paul</option>
         </select>
       </div>
+      <br />
       <div style={Object.assign({}, localStyles.buttonsWrapper, styles.buttonsWrapper)}>
         <button
-          className="btn btn-primary btn-lg outline"
+          className="btn btn-primary btn-lg outline authButton"
           id="login-button"
           type="button"
           // style={Object.assign({}, localStyles.button, styles.button)}
@@ -114,11 +115,11 @@ const Signup = ({
           {goToLoginCustomLabel}
         </button>
         <input
-          className="btn btn-primary btn-lg outline"
+          className="btn btn-primary btn-lg outline authButton"
           id="submit-signup"
           type="submit"
           value={submitSignupCustomLabel}
-          // style={Object.assign({}, localStyles.button, styles.button)}
+          style={Object.assign({}, localStyles.button, styles.button)}
           onClick={handleSignup}
         />
       </div>

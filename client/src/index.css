@@ -117,12 +117,7 @@ input[type="password"],
   border-radius: 0px;
 }
 
-#signup-button {
-  background-color: #f1545e !important;
-}
-
-
-#login-button{
+.authButton{
   background-color: #f1545e !important;
 }
  
@@ -144,14 +139,10 @@ body,
 }
 
 #main-wrapper {
-  justify-content: center !important;
+  /* justify-content: center !important; */
   font-family: 'Luckiest Guy', cursive;
-  align-items: center !important;
-  background-color: #a4e8fd !important;
-  border: solid 3px #003d66 !important;
-  border-radius: 3% !important;
-  color: #f1545e !important;
-  height: 350px !important;
+  align-items: center ;
+  color: #f1545e ;
 }
 
 
