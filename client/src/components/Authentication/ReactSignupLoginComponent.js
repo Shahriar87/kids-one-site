@@ -78,6 +78,10 @@ class ReactSignupLoginComponent extends React.Component {
       image: {
         width: "auto",
         height: "40%",
+      },
+      profile: {
+        width: "auto",
+        height: "80px",
       }
     };
     const showCard = () => {
@@ -122,17 +126,52 @@ class ReactSignupLoginComponent extends React.Component {
 
     };
     return (
-      // <div>
+      <div>
         <section
           id="main-wrapper"
           style={Object.assign(styles.wrapper, this.props.styles.mainWrapper)}
-          className="text-center"
+          className="text-center float-left"
         >
           <h1 id="login_title" className="outline" style={Object.assign(styles.title, this.props.styles.mainTitle)}>{this.props.title}</h1>
           <img src="Images/kidklub.png" style={styles.image} alt="logo" />
           <div style={Object.assign(styles.flipper, this.props.styles.flipper)}>{showCard()}</div>
         </section>
-      // </div>
+
+        <div className="text-center float-right" id="main-wrapper">
+          <h4>Developed by</h4>
+          <div className="d-inline-flex p-2">
+            <div className="card-body">
+              <img src="Images/bitmoji/stephen.png" style={styles.profile} alt="logo" />
+              <p>Stephen</p>
+            </div>
+            <div className="card-body">
+              <img src="Images/bitmoji/Paul.png" style={styles.profile} alt="logo" />
+              <p>Paul</p>
+            </div>
+            <div className="card-body">
+              <img src="Images/bitmoji/Dante.jpg" style={styles.profile} alt="logo" />
+              <p>Dante</p>
+            </div>
+          </div>
+          <div className="d-block-flex p-2">
+            <div className="d-inline-flex p-2">
+              <div className="card-body">
+                <img src="Images/bitmoji/Chanda.png" style={styles.profile} alt="logo" />
+                <p>Chanda</p>
+              </div>
+              <div className="card-body">
+                <img src="Images/bitmoji/Xavier.jpg" style={styles.profile} alt="logo" />
+                <p>Xavier</p>
+              </div>
+              <div className="card-body">
+                <img src="Images/bitmoji/Shah.jpg" style={styles.profile} alt="logo" />
+                <p>Shah</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     );
   }
 }
