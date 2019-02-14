@@ -85,7 +85,8 @@ const Signup = ({
           onChange={e => handleChange(e.target.name, e.target.value)}
           value={passwordConfirmation}
         />
-        <select style={Object.assign({}, localStyles.select, styles.select)}
+        <select
+          style={Object.assign({}, localStyles.select, styles.select)}
           type="text"
           id="profilePic"
           name="profilePic"
@@ -93,12 +94,32 @@ const Signup = ({
           value={profilePic}
         >
           <option value="">Select a character</option>
-          <option value="https://i.imgur.com/KNS1anH.jpg">Shah</option>
-          <option value="https://i.imgur.com/NEtWrw8.png">Stephen</option>
-          <option value="https://i.imgur.com/HzIMxvW.jpg">Dante</option>
-          <option value="https://i.imgur.com/YTrNK7w.jpg">Xavier</option>
-          <option value="https://i.imgur.com/rNsAtyd.jpg">Chanda</option>
-          <option value="https://i.imgur.com/Ke7A6ML.png">Paul</option>
+          <option value="Images/bitmoji/Shah.jpg">Shah</option>
+          <option value="Images/bitmoji/stephen.png">Stephen</option>
+          <option value="Images/bitmoji/Dante.jpg">Dante</option>
+          <option value="Images/bitmoji/Xavier.jpg">Xavier</option>
+          <option value="Images/bitmoji/Chanda.png">Chanda</option>
+          <option value="Images/bitmoji/Paul.png">Paul</option>
+          <option value="Images/bitmoji/Adreena.jpg">Adreena</option>
+          <option value="Images/bitmoji/Alex.jpg">Alex</option>
+          <option value="Images/bitmoji/Bruce.jpg">Bruce</option>
+          <option value="Images/bitmoji/Carlos.jpg">Carlos</option>
+          <option value="Images/bitmoji/Conner.png">Conner</option>
+          <option value="Images/bitmoji/Eric.png">Eric</option>
+          <option value="Images/bitmoji/Hasan.jpg">Hasan</option>
+          <option value="Images/bitmoji/Ingrid.jpg">Ingrid</option>
+          <option value="Images/bitmoji/Josh.png">Josh</option>
+          <option value="Images/bitmoji/Julio.png">Julio</option>
+          <option value="Images/bitmoji/Justin.png">Justin</option>
+          <option value="Images/bitmoji/Kyle.jpg">Kyle</option>
+          <option value="Images/bitmoji/Mary.jpg">Mary</option>
+          <option value="Images/bitmoji/Max.png">Max</option>
+          <option value="Images/bitmoji/Netreia.png">Netreia</option>
+          <option value="Images/bitmoji/Niko.png">Niko</option>
+          <option value="Images/bitmoji/Salavatore.jpg">Sal</option>
+          <option value="Images/bitmoji/Taylor.png">Taylor</option>
+          <option value="Images/bitmoji/Tyler.jpg">Tyler</option>
+          <option value="Images/bitmoji/Yan.png">Yan</option>
         </select>
       </div>
       <br />
