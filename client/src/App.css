@@ -50,10 +50,28 @@ body {
 
 /* LOGIN */
 
-#submit-signup {
-  margin: 0%;
+#login-button {
+  color: white !important;
+  border: 1px solid black;
+  -webkit-box-shadow: -10px 10px 0px rgba(50, 50, 50, 0.15);
+  -moz-box-shadow: -10px 10px 0px rgba(50, 50, 50, 0.15);
+  box-shadow: -10px 10px 0px rgba(50, 50, 50, 0.15);
+  background-color: #1e1e1e;
+  cursor: pointer;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
 }
 
+#signup-button {
+  color: white !important;
+  border: 1px solid black;
+  -webkit-box-shadow: -10px 10px 0px rgba(50, 50, 50, 0.15);
+  -moz-box-shadow: -10px 10px 0px rgba(50, 50, 50, 0.15);
+  box-shadow: -10px 10px 0px rgba(50, 50, 50, 0.15);
+  background-color: #1e1e1e;
+  cursor: pointer;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
 
 
 
@@ -85,7 +103,7 @@ body {
 
 
 #book-list {
-  
+  background-color: lightblue;
 }
 
 /* VIDEO */
@@ -100,17 +118,17 @@ footer {
   width: 100%;
   height: 35px;
   margin: 0 auto;
-  background-color: #83e4fc;
+  background-color: #a4e8fd;
   border-top: solid 1.5px #f1545e;
   text-align: center;
   color: white !important;
-  
+
   color: #f1545e !important;
   font-size: 15px;
 }
 
 .card-header {
-  background-color: #83e4fc;
+  background-color: #a4e8fd;
   /* text-align: auto !important; */
   font-family: 'Luckiest Guy', cursive;
   text-align: center;
@@ -149,15 +167,16 @@ footer {
 /* Game */
 
 #game_background {
-  /* background-image: url("./Assets/Images/1115.pngF"); */
+  background-image: url("./Assets/Images/1115.png") !important;
   /* border: 1px solid black; */
   padding: 0px;
   border-style: outset;
+  
 }
 
 #game_list_BG {
-  /* background-image: url("./Assets/Images/1115.png") !important; */
-  background: #282c34;
+  
+  background: lightblue;
 }
 
 
@@ -181,7 +200,7 @@ footer {
   /* border: 1px solid black !important; */
 }
 
-#Activites_Card_Body{
+#Activites_Card_Body {
   margin-left: auto;
   margin-right: auto;
 }
@@ -191,12 +210,12 @@ h5 {
   text-align: center;
 }
 
-#messageList{
+#messageList {
   background-image: url("./Assets/Images/memphis-colorful.png") !important;
   border-bottom: 1px solid black;
   /* opacity: 0.; */
 }
 
-.card-body{
+.card-body {
   background-image: url("./Assets/Images/memphis-colorful.png") !important;
 }
