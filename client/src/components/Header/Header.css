@@ -1,30 +1,45 @@
 #nav_main {
-    background-color: rgb(29, 29, 70);
-    color: white;
-    height: 70px;
-    margin: 0px;
+    background-color: #83e4fc !important;
+    color: white;    
+    margin-bottom: 8px;
+    height: 50px;
+    border-bottom: solid 2px #5f5ba7;
+
 }
+
 .navigation {
     color: white;
     font-size: 20px;
+    font-family: 'Luckiest Guy', cursive;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
+
 .navigation:hover {
     color: rgb(255, 94, 94);
 }
+
 #games {
     color: white;
     font-size: 20px;
 }
+
 #games:hover {
     color: rgb(255, 94, 94);
 }
+
 #video {
     color: white;
     font-size: 20px;
 }
+
 #video:hover {
-color: rgb(255, 94, 94);
+    color: rgb(255, 94, 94);
 }
+
 #logo {
     height: 70px;
     float: left;

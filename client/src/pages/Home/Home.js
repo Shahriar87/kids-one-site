@@ -25,8 +25,9 @@ function Home(props) {
 
     return (
         <Router>
-            <div>
+            <div className="" >
                 <Header />
+
                     <div className="container row cont wrapper">
                         <div className="col-sm-9">
                             <Route exact path="/home" component={ContentBody} />
@@ -37,10 +38,10 @@ function Home(props) {
                             <div className="card">
                                 <div className="card-header">
                                    <h5>Messenger</h5> 
-                                   <h4>Welcome <span className="kidklub"><strong>{userName}!</strong></span></h4>
-                                   <img className="img-fluid img-thumbnail mx-auto d-block" src={profilePic} alt={userName} />
+                                   <h4><span className="kidklub"><strong>{userName}!</strong></span></h4>
+                                   <img id="profile_img" className="img-fluid img-thumbnail mx-auto d-block" src={profilePic} alt={userName} />
                                 </div>
-                                <div className="card-body">
+                                <div className=" no_pad card-body">
                                     <MessengerApp {...props} userName={userName} profilePic={profilePic} />
                                 </div>
                             </div>

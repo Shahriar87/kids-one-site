@@ -28,7 +28,7 @@ class Messages extends React.Component {
     });
 
     return (
-      <div className='messages' id='messageList'>
+      <div className=' no_pad messages' id='messageList'>
         {messages}
       </div>
     );

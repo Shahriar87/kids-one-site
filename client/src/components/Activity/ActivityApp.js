@@ -172,7 +172,8 @@ class ActivityApp extends Component {
     // console.log(this.state.favorites[this.state.highlight])
 
     return (
-      <div className="app jumbotron text-center" style={styles.body}>
+      <div id="Activites_Card_Body" className="app jumbotron text-center" style={styles.body}>
+        
         {this.state.items[this.state.highlight] || this.state.favorites[this.state.highlight] ?
           <Highlight
             data={
