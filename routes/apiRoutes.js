@@ -1,9 +1,11 @@
 const User = require('../models/user.model');
 const UserSession = require('../models/userSession.model');
 const Activity = require('../models/activity.model');
+const Game = require('../models/game.model');
 
 module.exports = app => {
 
+    // ----- AUTHENTICATION API -----
     // ----- Sign up API endpoints
     app.post('/api/account/signup', (req, res, next) => {
         const { body } = req;
@@ -163,12 +165,16 @@ module.exports = app => {
         })
     });
 
+    // ----- FAVORITE ACTIVITY API
     // ----- Adding favorites
     app.post('/api/favorites/activities', (req, res) => {
+
+        // console.log(req.body);
         const activity = new Activity();
-        activity.title = req.body.title,
-            activity.imageLink = req.body.imageLink,
-            activity.link = req.body.link;
+        activity.title = req.body.title;
+        activity.imageLink = req.body.imageLink;
+        activity.link = req.body.link;
+        // console.log(activity);
 
         activity.save(err => {
             if (err) { res.send(err) }
@@ -177,8 +183,6 @@ module.exports = app => {
                     message: 'Favourite Activity added',
                     favorite: activity
                 })
-
-                console.log(favorite.activity)
             }
         })
     })
@@ -193,11 +197,49 @@ module.exports = app => {
 
     // ----- Deleting favorites
     app.delete('/api/favorites/activities/:id', (req, res) => {
-        Activity.remove({ _id: req.params.id }, err => {
+        Activity.deleteOne({ _id: req.params.id }, err => {
             if (err) { res.send(err) }
             else { res.send("Record Removed") }
         })
     })
 
+
+    // ----- FAVORITE GAME API
+    // ----- Adding favorites
+    app.post('/api/favorites/games', (req, res) => {
+
+        // console.log(req.body);
+        const game = new Game();
+        game.title = req.body.title;
+        game.imageLink = req.body.imageLink;
+        game.link = req.body.link;
+        // console.log(activity);
+
+        game.save(err => {
+            if (err) { res.send(err) }
+            else {
+                res.json({
+                    message: 'Favourite Game added',
+                    favorite: game
+                })
+            }
+        })
+    })
+
+    // ----- Fetching favorites
+    app.get('/api/favorites/games', (req, res) => {
+        Game.find((err, activities) => {
+            if (err) { res.send(err) }
+            else { res.json(activities) }
+        })
+    })
+
+    // ----- Deleting favorites
+    app.delete('/api/favorites/games/:id', (req, res) => {
+        Game.deleteOne({ _id: req.params.id }, err => {
+            if (err) { res.send(err) }
+            else { res.send("Record Removed") }
+        })
+    })
 
 };

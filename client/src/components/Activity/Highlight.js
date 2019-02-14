@@ -15,7 +15,7 @@ const styles = {
 export default class Highlight extends Component {
 
 	state = {
-		activityLink: "http://play.fisher-price.com" + "/en_US/GamesandActivities/Crafts/IceCreamConeClowns.html",
+		activityLink: "http://play.fisher-price.com/en_US/GamesandActivities/Crafts/IceCreamConeClowns.html",
 		htmlString: ''
 	}
 
@@ -63,17 +63,22 @@ export default class Highlight extends Component {
 	}
 
 	componentDidUpdate() {
-		if (this.state.activityLink !== null) {
-			if (this.state.activityLink !== "http://play.fisher-price.com" + this.props.data.link) {
-				this.setState({
-					activityLink: "http://play.fisher-price.com" + this.props.data.link
-				}, this.fetchActivity)
-			}
-		}
+		if (this.state.activityLink) {
+			console.log(this.state.activityLink)
+			// console.log(this.props.data.activityLink)
+
+			// ---- If props data dont exist, do not render
+			if (this.props.data) {
+				if (this.state.activityLink !== "http://play.fisher-price.com" + this.props.data.link) {
+					this.setState({
+						activityLink: "http://play.fisher-price.com" + this.props.data.link
+					}, this.fetchActivity)
+				}
+			} 
+		} 
 	}
 
 	render() {
-
 		if (this.props.visibility.highlight) {
 			return (
 				<div>
@@ -105,9 +110,12 @@ export default class Highlight extends Component {
 
 	}
 
-
-
 }
+
+// Set default props
+Highlight.defaultProps = {
+	activityLink: "http://play.fisher-price.com/en_US/GamesandActivities/Crafts/IceCreamConeClowns.html",
+};
 
 
 

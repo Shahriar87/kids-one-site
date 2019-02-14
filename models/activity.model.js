@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var activitySchema = new Schema({
     title: String,
     imageLink: String,
-    link: Number
+    link: String
 });
 
 var Activity = mongoose.model("Activity", activitySchema);

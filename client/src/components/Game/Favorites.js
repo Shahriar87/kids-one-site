@@ -10,7 +10,8 @@ export const Favorites = ({data, highlight, visibility}) => {
 				{data.map((entry, i) =>
 					<BookRow key = {i}
 					         rowNumber = {i}
-					         title = {entry.title}
+							 title = {entry.title}
+							 imageLink={entry.imageLink}
 							 highlight = {highlight}
 					/>
 				)}

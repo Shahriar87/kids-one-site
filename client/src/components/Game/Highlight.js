@@ -4,13 +4,6 @@ export const Highlight = ({ data, visibility, addFavorite, removeFavorite }) => 
 
 	const color = { background: 'white', border: 'white', color: 'red' };
 
-	const styles = {
-		img: {
-			width: "200%",
-			height: "auto"
-		},
-	};
-
 	const addToFavorites = () => {
 		addFavorite(data);
 	};

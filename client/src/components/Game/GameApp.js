@@ -5,11 +5,6 @@ import { Favorites } from './Favorites';
 import { Menu } from './Menu';
 import axios from 'axios';
 
-const styles = {
-  body: {
-    background: "#e8eaf6"
-  },
-};
 
 
 class GameApp extends Component {
@@ -107,7 +102,7 @@ class GameApp extends Component {
     });
 
     // ----- Adding Favourites
-    axios.post('/api/favorites', data)
+    axios.post('/api/favorites/games', data)
       .then(function (res) {
         console.log(res);
       })
@@ -128,7 +123,7 @@ class GameApp extends Component {
       favorites: [...remove]
     });
 
-    axios.delete(`/api/favorites/${data._id}`, data)
+    axios.delete(`/api/favorites/games/${data._id}`, data)
       .then(function (res) {
         console.log(res);
       }).catch(function (err) {
@@ -142,7 +137,7 @@ class GameApp extends Component {
     this.updateQuery()
 
     // ----- Fetching favourites
-    axios.get('/api/favorites')
+    axios.get('/api/favorites/games')
       .then(response => {
         // console.log('Fetched from mongo', response.data);
         this.setState({

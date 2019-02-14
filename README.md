@@ -1,5 +1,7 @@
 # KidKlub!
 
+![alt text](client/src/Assets/Images/kidklub.png)
+
 Check the app at [www.kidklub.org](https://kidklub.herokuapp.com/)
 
 ## Project Brief

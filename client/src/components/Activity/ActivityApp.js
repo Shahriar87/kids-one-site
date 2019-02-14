@@ -40,7 +40,7 @@ class ActivityApp extends Component {
 
   // ----- Fetch data from activity API
   fetchQuery() {
-    axios.get('api/activity')
+    axios.get('/api/activity')
       .then((res) => {
         // console.log(res);
         res.data.forEach((item, i) => {
@@ -98,7 +98,7 @@ class ActivityApp extends Component {
   }
 
   addFavorite(data) {
-    console.log(data)
+    // console.log(data)
     this.setState({
       items: this.state.items.filter((item, i) => i !== this.state.highlight),
       visibility: {
@@ -184,6 +184,7 @@ class ActivityApp extends Component {
             visibility={this.state.visibility}
             addFavorite={this.addFavorite}
             removeFavorite={this.removeFavorite}
+            fetchQuery={this.fetchQuery}
           /> :
           null}
 
