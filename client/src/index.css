@@ -61,70 +61,10 @@ body {
 
 
 /* For login Page */
-.sign-in-up .left-inner-addon {
-  position: relative;
-}
-
-.sign-in-up .left-inner-addon input {
-  padding-left: 30px;
-}
-
-.sign-in-up .left-inner-addon i {
-  position: absolute;
-  padding: 10px 12px;
-  pointer-events: none;
-}
-
-.sign-in-up .right-inner-addon {
-  position: relative;
-}
-
-.sign-in-up .right-inner-addon input {
-  padding-right: 30px;
-}
-
-.sign-in-up .right-inner-addon i {
-  position: absolute;
-  right: 0px;
-  padding: 17px 12px;
-  pointer-events: none;
-}
-
-.sign-in-up .click2select {
-  text-align: center;
-  margin-top: 1em;
-}
-
-.sign-in-up .paywith {
-  padding: 12px 12px 0 0;
-  margin: 0;
-  font-weight: bold;
-}
-
-.btn-danger,
-.btn-danger:hover {
-  background-color: #333399 !important;
-  border-color: #333399 !important;
-}
-
-.btn-primary,
-.btn-primary:hover {
-  background-color: #3366CC !important;
-  border-color: #3366CC !important;
-}
-
-input[type="text"],
-input[type="password"],
-.btn {
-  border-radius: 0px;
-}
-
-#signup-button {
-  background-color: #f1545e !important;
-}
 
 
-/* #login-button { */
+
+
 .authButton{
   background-color: #f1545e !important;
 }
@@ -149,12 +89,8 @@ body,
 #main-wrapper {
   /* justify-content: center !important; */
   font-family: 'Luckiest Guy', cursive;
-  align-items: center !important;
-  background-color: #a4e8fd !important;
-  border: solid 3px #003d66 !important;
-  border-radius: 3% !important;
-  color: #f1545e !important;
-  height: 400px !important;
+  align-items: center ;
+  color: #f1545e ;
 }
 
 
