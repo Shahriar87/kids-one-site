@@ -4,9 +4,13 @@ import React from 'react';
 
 const styles = {
 	img: {
-		width: "20.1%",
-		height: "10.2%"
+		width: "60%",
+		height: "60%"
 	},
+	card: {
+		width: "200px",
+		height: "200px"
+	}
 };
 
 export const BookRow = ({ rowNumber, title, imageLink, link, highlight }) => {
@@ -20,11 +24,14 @@ export const BookRow = ({ rowNumber, title, imageLink, link, highlight }) => {
 	}
 
 	return (
-		<div>
+		<div className="card m-3" style={styles.card}>
 			<div onClick={click} className="list-group-item">
-				<img src={imageLink} alt={title} style={styles.img} />
-				<br />
-				<span>{title}</span>
+				<div className="card-body">
+					<img src={imageLink} alt={title} style={styles.img} />
+				</div>
+				<div className="card-title">
+					<span>{title}</span>
+				</div>
 			</div>
 			<br />
 		</div>

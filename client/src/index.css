@@ -124,7 +124,8 @@ input[type="password"],
 }
 
 
-#login-button {
+/* #login-button { */
+.authButton{
   background-color: #f1545e !important;
 }
 
@@ -146,7 +147,7 @@ body,
 }
 
 #main-wrapper {
-  justify-content: center !important;
+  /* justify-content: center !important; */
   font-family: 'Luckiest Guy', cursive;
   align-items: center !important;
   background-color: #a4e8fd !important;

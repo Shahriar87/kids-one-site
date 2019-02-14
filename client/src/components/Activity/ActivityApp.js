@@ -8,7 +8,6 @@ import axios from 'axios';
 const styles = {
   body: {
     background: "#e8eaf6"
-    
   },
 };
 
@@ -75,7 +74,7 @@ class ActivityApp extends Component {
 
   // ----- Detail info about selected books
   updateHighlight(highlight) {
-    console.log(highlight.highlight)
+    // console.log(highlight.highlight)
     // console.log(this.state.items[highlight.highlight])
     this.setState({
       highlight: highlight.highlight,
@@ -99,6 +98,7 @@ class ActivityApp extends Component {
   }
 
   addFavorite(data) {
+    console.log(data)
     this.setState({
       items: this.state.items.filter((item, i) => i !== this.state.highlight),
       visibility: {
@@ -110,7 +110,7 @@ class ActivityApp extends Component {
     });
 
     // ----- Adding Favourites
-    axios.post('/api/favorites', data)
+    axios.post('/api/favorites/activities', data)
       .then(function (res) {
         console.log(res);
       })
@@ -131,7 +131,7 @@ class ActivityApp extends Component {
       favorites: [...remove]
     });
 
-    axios.delete(`/api/favorites/${data._id}`, data)
+    axios.delete(`/api/favorites/activities/${data._id}`, data)
       .then(function (res) {
         console.log(res);
       }).catch(function (err) {
@@ -145,7 +145,7 @@ class ActivityApp extends Component {
     this.updateQuery();
 
     // ----- Fetching favourites
-    axios.get('/api/favorites')
+    axios.get('/api/favorites/activities')
       .then(response => {
         // console.log('Fetched from mongo', response.data);
         this.setState({
@@ -169,11 +169,11 @@ class ActivityApp extends Component {
 
   render() {
 
-    console.log(this.state.favorites[this.state.highlight])
+    // console.log(this.state.favorites[this.state.highlight])
 
     return (
       <div id="Activites_Card_Body" className="app jumbotron text-center" style={styles.body}>
-        {this.state.items[this.state.highlight] ?
+        {this.state.items[this.state.highlight] || this.state.favorites[this.state.highlight] ?
           <Highlight
             data={
               this.state.visibility.favorites ?

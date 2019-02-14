@@ -20,11 +20,11 @@ export default class Highlight extends Component {
 	}
 
 	addToFavorites = () => {
-		this.props.addFavorite(this.state.data);
+		this.props.addFavorite(this.props.data);
 	};
 
 	removeFromFavorites = () => {
-		this.props.removeFavorite(this.state.data);
+		this.props.removeFavorite(this.props.data);
 	}; 1
 
 
@@ -63,10 +63,12 @@ export default class Highlight extends Component {
 	}
 
 	componentDidUpdate() {
-		if (this.state.activityLink !== "http://play.fisher-price.com" + this.props.data.link) {
-			this.setState({
-				activityLink: "http://play.fisher-price.com" + this.props.data.link
-			}, this.fetchActivity)
+		if (this.state.activityLink !== null) {
+			if (this.state.activityLink !== "http://play.fisher-price.com" + this.props.data.link) {
+				this.setState({
+					activityLink: "http://play.fisher-price.com" + this.props.data.link
+				}, this.fetchActivity)
+			}
 		}
 	}
 
@@ -75,15 +77,15 @@ export default class Highlight extends Component {
 		if (this.props.visibility.highlight) {
 			return (
 				<div>
-					<section id="wrapperHighlight" 
+					<section id="wrapperHighlight"
 						aria-label="Book Detail">
 						<div className="bg-secondary">
 							<h2>{this.props.data.title}</h2>
 						</div>
 						<br />
-							<div className="col-4">
-								<img src={"//play.fisher-price.com" + this.props.data.imageLink} alt={this.props.data.title} style={styles.img} />
-							</div>
+						<div className="col-4">
+							<img src={"//play.fisher-price.com" + this.props.data.imageLink} alt={this.props.data.title} style={styles.img} />
+						</div>
 						<br />
 						<div id="content" className="row" dangerouslySetInnerHTML={{ __html: this.state.htmlString }}>
 						</div>

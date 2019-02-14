@@ -33,8 +33,8 @@ export const Menu = ({ setVisibility, visibility }) => {
             </span>
             <span>
                 {visibility.favorites ?
-                    <button onClick={() => showHome()}>Top 10</button> :
-                    <button style={color}>Top 10</button>
+                    <button onClick={() => showHome()}>Trending</button> :
+                    <button style={color}>Trending</button>
                 }
             </span>
         </nav>
