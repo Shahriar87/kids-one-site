@@ -10,7 +10,7 @@ import "./Home.css"
 
 const styles = {
 	img: {
-		width: "50%",
+		width: "80%",
 		height: "auto"
 	},
 };
@@ -39,7 +39,7 @@ function Home(props) {
                                 <div className="card-header">
                                    <h5>Messenger</h5> 
                                    <h4><span className="kidklub"><strong>{userName}!</strong></span></h4>
-                                   <img id="profile_img" className="img-fluid img-thumbnail mx-auto d-block" src={profilePic} alt={userName} />
+                                   <img id="profile_img" className="img-fluid img-thumbnail mx-auto d-block" src={profilePic} alt={userName} style={styles.img}/>
                                 </div>
                                 <div className=" no_pad card-body">
                                     <MessengerApp {...props} userName={userName} profilePic={profilePic} />

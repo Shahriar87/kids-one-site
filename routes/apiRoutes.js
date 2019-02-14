@@ -13,6 +13,9 @@ module.exports = app => {
         let {
             username
         } = body;
+        const {
+            passwordConfirmation
+        } = body;
         let {
             profilePic
         } = body;
@@ -27,6 +30,26 @@ module.exports = app => {
             return res.send({
                 success: false,
                 message: 'Error: Password cannot be blank.'
+            });
+        }
+        if (!passwordConfirmation) {
+            return res.send({
+                success: false,
+                message: 'Error: Confirm Password cannot be blank.'
+            });
+        }
+
+        if (password !== passwordConfirmation) {
+            return res.send({
+                success: false,
+                message: 'Error: Password dont match.'
+            });
+        }
+
+        if (profilePic === '') {
+            return res.send({
+                success: false,
+                message: 'Error: You have to select a character.'
             });
         }
 
