@@ -33,7 +33,7 @@ input[type="text"]:focus {
 input[type="submit"] {
   background-color: #323232;
   color: white;
-  font: 700 1rem "proxima-nova",sans-serif;
+  font: 70 1rem 'Luckiest Guy', cursive;
   border: none;
   position: relative;
   -webkit-transition: 0.3s ease-in-out;
@@ -45,14 +45,16 @@ input[type="submit"] {
   cursor: pointer;
   -webkit-box-shadow: -7px 7px 0px rgba(50,50,50,0.15);
   -moz-box-shadow: -7px 7px 0px rgba(50,50,50,0.15);
-  box-shadow: -7px 7px 0px rgba(50,50,50,0.15);
+  box-shadow: -7px 7px 0px rgba(50,50,50,0.15);  
   margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 3px ;
 }
 
 input[type="submit"]:hover {
   -webkit-box-shadow: -10px 10px 0px rgba(50,50,50,0.15);
   -moz-box-shadow: -10px 10px 0px rgba(50,50,50,0.15);
-  box-shadow: -10px 10px 0px rgba(50,50,50,0.15);
+  /* box-shadow: -10px 10px 0px rgba(50,50,50,0.15); */
   background-color: #1e1e1e;
 }
 
