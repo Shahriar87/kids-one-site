@@ -33,9 +33,10 @@ body {
 
 #profile_img {
 
-  height: 100%;
-  width: 15%;
-  border: 2px solid black;
+  /* height: 100%; */
+  /* width: 15%; */
+  border: 2px solid black !important;
+  border-style: double;
 }
 
 #logo {
@@ -197,13 +198,10 @@ body,
 }
 
 
-#nav_main {
-  height: 30px;
-  border-bottom: solid 2px #f1545e
-}
+
 
 .signout_button {
-  background-color: #75AECC;
+  background-color: #f1545e;
   margin-bottom: 0px;
 }
 
