@@ -38,7 +38,7 @@ class MessengerApp extends React.Component {
       username: this.uName.value,
       profilePic: this.pPic.value
     });
-    console.log(this.pPic.value)
+    // console.log(this.pPic.value)
 
   }
 

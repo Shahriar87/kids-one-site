@@ -23,6 +23,8 @@ class ChatApp extends React.Component {
     // Connect to the server
     this.socket = io(config.api, { query: `username=${props.username}` }).connect();
 
+    this.sendHandler(props.username + " joined in the messenger")
+
     // Listen for messages from the server
     this.socket.on('server:message', message => {
       this.addMessage(message);
