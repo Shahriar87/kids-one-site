@@ -1,9 +1,10 @@
 const User = require('../models/user.model');
 const UserSession = require('../models/userSession.model');
+const Activity = require('../models/activity.model');
 
 module.exports = app => {
-    // ----- Sign up API endpoints
 
+    // ----- Sign up API endpoints
     app.post('/api/account/signup', (req, res, next) => {
         const { body } = req;
         const {
@@ -69,6 +70,7 @@ module.exports = app => {
         });
     });
 
+    // ----- Sign in API endpoints
     app.post('/api/account/signin', (req, res, next) => {
         const { body } = req;
         const {
@@ -95,7 +97,7 @@ module.exports = app => {
             username: username
         }, (err, users) => {
             if (err) {
-                console.log('err 2:', err);
+                // console.log('err 2:', err);
                 return res.send({
                     success: false,
                     message: 'Error: server error'
@@ -117,12 +119,12 @@ module.exports = app => {
             // ---- Otherwise correct user
             // const profilePic = user.profilePic;
             // console.log(user);
-            
+
             const userSession = new UserSession();
             userSession.userId = user._id;
             userSession.save((err, doc) => {
                 if (err) {
-                    console.log(err);
+                    // console.log(err);
                     return res.send({
                         success: false,
                         message: 'Error: server error'
@@ -132,72 +134,47 @@ module.exports = app => {
                     success: true,
                     message: 'Valid sign in',
                     token: doc._id,
-                    profilePic : user.profilePic
+                    profilePic: user.profilePic
                 });
-                // return res.json(user)
             });
         })
     });
 
-    app.get('/api/account/logout', (req, res, next) => {
-        // ---- Get the token
-        const { query } = req;
-        const { token } = query;
-        // ---- ?token=test
-        // ---- Verify the token is one of a kind and it's not deleted.
-        UserSession.findOneAndUpdate({
-            _id: token,
-            isDeleted: false
-        }, {
-                $set: {
-                    isDeleted: true
-                }
-            }, null, (err, sessions) => {
-                if (err) {
-                    console.log(err);
-                    return res.send({
-                        success: false,
-                        message: 'Error: Server error'
-                    });
-                }
-                return res.send({
-                    success: true,
-                    message: 'Good'
-                });
-            });
-    });
+    // ----- Adding favorites
+    app.post('/api/favorites/activities', (req, res) => {
+        const activity = new Activity();
+        activity.title = req.body.title,
+            activity.imageLink = req.body.imageLink,
+            activity.link = req.body.link;
 
-    app.get('/api/account/verify', (req, res, next) => {
-        // ---- Get the token
-        const { query } = req;
-        const { token } = query;
+        activity.save(err => {
+            if (err) { res.send(err) }
+            else {
+                res.json({
+                    message: 'Favourite Activity added',
+                    favorite: activity
+                })
 
-        // ---- Verify the token is one of a kind and it's not deleted.
-        UserSession.find({
-            _id: token,
-            isDeleted: false
-        }, (err, sessions) => {
-            if (err) {
-                console.log(err);
-                return res.send({
-                    success: false,
-                    message: 'Error: Server error'
-                });
+                console.log(favorite.activity)
             }
-            if (sessions.length != 1) {
-                return res.send({
-                    success: false,
-                    message: 'Error: Invalid'
-                });
-            } else {
-                // --- DO ACTION
-                return res.send({
-                    success: true,
-                    message: 'Good'
-                });
-            }
-        });
-    });
+        })
+    })
+
+    // ----- Fetching favorites
+    app.get('/api/favorites/activities', (req, res) => {
+        Activity.find((err, activities) => {
+            if (err) { res.send(err) }
+            else { res.json(activities) }
+        })
+    })
+
+    // ----- Deleting favorites
+    app.delete('/api/favorites/activities/:id', (req, res) => {
+        Activity.remove({ _id: req.params.id }, err => {
+            if (err) { res.send(err) }
+            else { res.send("Record Removed") }
+        })
+    })
 
 
 };

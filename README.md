@@ -1,6 +1,6 @@
 # KidKlub!
 
-[Check the app](https://kidklub.herokuapp.com/)
+Check the app at [www.kidklub.org](https://kidklub.herokuapp.com/)
 
 ## Project Brief
 

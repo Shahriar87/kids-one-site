@@ -27,7 +27,8 @@ function Home(props) {
         <Router>
             <div className="" >
                 <Header />
-                    <div className=" container row cont wrapper">
+
+                    <div className="container row cont wrapper">
                         <div className="col-sm-9">
                             <Route exact path="/home" component={ContentBody} />
                             <Route exact path="/video" component={VideoBody} />

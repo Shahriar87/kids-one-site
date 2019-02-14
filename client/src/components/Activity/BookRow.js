@@ -13,7 +13,7 @@ const styles = {
 	}
 };
 
-export const BookRow = ({ rowNumber, title, imageLink, link, highlight }) => {
+export const BookRow = ({ rowNumber, title, imageLink, highlight }) => {
 
 	// Scroll to the top of UI when user selects an entry
 	const click = () => {
@@ -25,7 +25,7 @@ export const BookRow = ({ rowNumber, title, imageLink, link, highlight }) => {
 	}
 
 	return (
-		<div className="card float-left" style={styles.card}>
+		<div className="card m-3" style={styles.card}>
 			<div onClick={click} className="list-group-item">
 				<div className="card-body">
 					<img src={"//play.fisher-price.com" + imageLink} alt={title} style={styles.img} />
@@ -41,5 +41,4 @@ export const BookRow = ({ rowNumber, title, imageLink, link, highlight }) => {
 BookRow.propTypes = {
 	title: PropTypes.string,
 	imageLink: PropTypes.string,
-	link: PropTypes.string
 }

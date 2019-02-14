@@ -129,7 +129,7 @@ const AuthButton = withRouter(({ history }) => (
     </p>
   ) : (
       <div>
-        <p>You are not logged in.</p>
+        {/* <p>You are not logged in.</p> */}
         <Redirect to="/auth" />
       </div>
     )
