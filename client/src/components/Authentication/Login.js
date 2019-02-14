@@ -78,7 +78,7 @@ const Login = ({
     <div style={Object.assign({}, localStyles.buttonsWrapper, styles.buttonsWrapper)}>
    
       <button
-        className="btn btn-primary btn-lg outline authButton"
+        className="btn-lg outline authButton"
         id="signup-button"
         type="button"
         // style={Object.assign({}, localStyles.button, styles.button)}
@@ -89,7 +89,7 @@ const Login = ({
         {goToSignupCustomLabel}
       </button>
       <input
-        className="btn btn-primary btn-lg outline authButton"
+        className="btn-lg outline authButton"
         id="submit-login"
         name="submit-login"
         value={submitLoginCustomLabel}
