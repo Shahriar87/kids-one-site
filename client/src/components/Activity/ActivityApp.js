@@ -173,6 +173,7 @@ class ActivityApp extends Component {
 
     return (
       <div id="Activites_Card_Body" className="app jumbotron text-center" style={styles.body}>
+        
         {this.state.items[this.state.highlight] || this.state.favorites[this.state.highlight] ?
           <Highlight
             data={
