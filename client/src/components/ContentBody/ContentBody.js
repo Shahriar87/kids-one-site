@@ -17,7 +17,7 @@ class ContentBody extends Component {
                     <div className="col-sm-4">
                         <div className="card">
                             <div id="school_announcment_header" className="card-header">
-                               <p className =""> <span class="kidklub">School Announcements</span> </p>
+                               <p className =""> <span className="kidklub">School Announcements</span> </p>
                             </div>
                             <div id="school_annoucments" className="card-body">
                                 <h5 className="card-title">Valentine's Day Party and Boxes</h5>

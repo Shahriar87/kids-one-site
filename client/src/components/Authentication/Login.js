@@ -119,7 +119,6 @@ Login.propTypes = {
   }),
   usernameCustomLabel: PropTypes.string.isRequired,
   passwordCustomLabel: PropTypes.string.isRequired,
-  recoverPasswordCustomLabel: PropTypes.string.isRequired,
   goToSignupCustomLabel: PropTypes.string.isRequired,
   submitLoginCustomLabel: PropTypes.string.isRequired,
 };
