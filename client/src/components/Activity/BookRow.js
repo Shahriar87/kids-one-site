@@ -28,7 +28,7 @@ export const BookRow = ({ rowNumber, title, imageLink, highlight }) => {
 		<div className="card m-3" style={styles.card}>
 			<div onClick={click} className="list-group-item">
 				<div className="card-body">
-					<img src={"//play.fisher-price.com" + imageLink} alt={title} style={styles.img} />
+					<img src={"https://play.fisher-price.com" + imageLink} alt={title} style={styles.img} />
 				</div>
 				<div className="card-title">
 					<span>{title}</span>
