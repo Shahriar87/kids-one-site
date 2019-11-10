@@ -35,18 +35,15 @@ class Login extends React.Component {
 
   // ---- Log in authentication
   loginWasClickedCallback = (data) => {
-    // console.log(data);
     // alert('Login callback, see log on the console to see the data.');
 
     axios.post('/api/account/signin', data)
       .then(function (res) {
-        // console.log(res.data.success);
         if (res.data.success) {
           authFunc.isAuthenticated = true
           userName = data.username
           profilePic = res.data.profilePic
-          // console.log(userName)
-          // console.log(data)
+
         } else {
           authFunc.isAuthenticated = false
           alert(res.data.message)
@@ -60,16 +57,13 @@ class Login extends React.Component {
 
   // ---- Sign up authentication
   signupWasClickedCallback = (data) => {
-    console.log(data);
     // ----- Adding User
     axios.post('/api/account/signup', data)
       .then(function (res) {
-        // console.log(res.data);
         if (res.data.success) {
           authFunc.isAuthenticated = true
           userName = data.username
           profilePic = data.profilePic
-          console.log(profilePic)
         } else {
           authFunc.isAuthenticated = false
           alert(res.data.message)
