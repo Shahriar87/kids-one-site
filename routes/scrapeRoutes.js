@@ -9,24 +9,25 @@ module.exports = (app) => {
 
     // ---- Scraping Kid's Activity
     app.get("/api/activity", (req, res) => {
-        axios.get("http://play.fisher-price.com/en_US/GamesandActivities/Crafts/index.html").then(function (response) {
+        axios.get("https://www.dltk-kids.com/crafts/miscellaneous/").then(function (response) {
             var $ = cheerio.load(response.data);
+
             var Activity = [];
-            $("li.tiles_content").each(function () {
+
+            $("div.indexText").each(function () {
                 var result = {};
 
                 result.title = $(this)
-                    .children("div.tiles_title")
-                    .children("p")
+                    .children("h3")
+                    .find("a")
                     .text().trim();
                 result.imageLink = $(this)
-                    .children("div.tiles_image")
-                    .children("a")
+                    .prev("div.indexImage")
                     .children("img")
                     .attr("src").trim();
                 result.link = $(this)
-                    .children("div.tiles_image")
-                    .children("a")
+                    .children("h3")
+                    .find("a")
                     .attr("href").trim();
 
                 Activity.push(result)
@@ -38,7 +39,8 @@ module.exports = (app) => {
                 //         // console.log(dbActivity);
                 //     }
                 // })
-            })
+
+            });
 
             // ----- Send a message to the client
             res.json(Activity)
@@ -59,26 +61,24 @@ module.exports = (app) => {
     // });
 
 
-
     // ---- Scraping Kid's Activity
     app.post("/api/singleactivity", (req, res) => {
-        // console.log(req.body)
         axios.get(req.body.activityLink).then(function (response) {
             var $ = cheerio.load(response.data);
             var singleActivity = [];
-            $("div.left_content").each(function () {
+            $("article#content").each(function () {
                 var result = {};
 
                 result.data = $(this).html();
-                // console.log(result.data)
 
                 singleActivity.push(result)
             })
 
             // ----- Send a message to the client
             res.json(singleActivity[0].data)
-            // console.log(singleActivity);
-        }).catch(err => { console.log(err) });
+        }).catch(err => {
+            console.log(err)
+        });
     });
 
 

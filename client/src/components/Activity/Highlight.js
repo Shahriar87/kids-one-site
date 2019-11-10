@@ -15,7 +15,8 @@ const styles = {
 export default class Highlight extends Component {
 
 	state = {
-		activityLink: "http://play.fisher-price.com/en_US/GamesandActivities/Crafts/IceCreamConeClowns.html",
+		// activityLink: "http://play.fisher-price.com/en_US/GamesandActivities/Crafts/IceCreamConeClowns.html",
+		activityLink: "",
 		htmlString: ''
 	}
 
@@ -51,14 +52,14 @@ export default class Highlight extends Component {
 	// componentWillReceiveProps() {
 	// 	document.getElementById("content").innerHTML = '<p>Data Loading! Please Wait</p>';
 	// 	this.setState({
-	// 		activityLink: "http://play.fisher-price.com" + this.props.data.link
+	// 		activityLink: "https://www.dltk-kids.com/" + this.props.data.link
 	// 	}, this.fetchActivity)
 	// }
 
 	// ---- I get a faster result with these 2 on rendering 
 	componentDidMount() {
 		this.setState({
-			activityLink: "http://play.fisher-price.com" + this.props.data.link
+			activityLink: this.props.data.link
 		}, this.fetchActivity)
 	}
 
@@ -69,9 +70,9 @@ export default class Highlight extends Component {
 
 			// ---- If props data dont exist, do not render
 			if (this.props.data) {
-				if (this.state.activityLink !== "http://play.fisher-price.com" + this.props.data.link) {
+				if (this.state.activityLink.indexOf("https://www.dltk-kids.com/") > -1 && this.state.activityLink.indexOf("http://www.dltk-kids.com/") > -1) {
 					this.setState({
-						activityLink: "http://play.fisher-price.com" + this.props.data.link
+						activityLink: "https://www.dltk-kids.com/" + this.props.data.link
 					}, this.fetchActivity)
 				}
 			} 
@@ -89,7 +90,7 @@ export default class Highlight extends Component {
 						</div>
 						<br />
 						<div className="col-4">
-							<img src={"//play.fisher-price.com" + this.props.data.imageLink} alt={this.props.data.title} style={styles.img} />
+							<img src={"https://www.dltk-kids.com" + this.props.data.imageLink} alt={this.props.data.title} style={styles.img} />
 						</div>
 						<br />
 						<div id="content" className="row" dangerouslySetInnerHTML={{ __html: this.state.htmlString }}>
