@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-// import './App.css';
 import _ from 'lodash';
 import SearchBar from './search_bar';
 import YTSearch from 'youtube-api-search';
 import VideoList from './video_list';
 import VideoDetail from './video_detail'
-const API_KEY = 'AIzaSyDVwj59JCyEm2n4lmlTC7YUZDN8z5SRANY';
+const YT_API_KEY = 'AIzaSyA7BGLR4EIAhKa9NLRUH_V5l65NMZqyO-A';
 
 class VideoBody extends Component {
     constructor(props) {
@@ -18,7 +17,7 @@ class VideoBody extends Component {
     }
 
     videoSearch(term) {
-        YTSearch({ key: API_KEY, term: term }, (videos) => {
+        YTSearch({ key: YT_API_KEY, term: term }, (videos) => {
             this.setState({
                 videos: videos,
                 selectedVideo: videos[0]
