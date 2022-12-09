@@ -23,7 +23,7 @@
     "bcrypt-nodejs": "0.0.3",
     "cheerio": "^1.0.0-rc.2",
     "cors": "^2.8.5",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "http": "0.0.0",
     "if-env": "^1.0.4",
     "mongoose": "^5.7.5",
